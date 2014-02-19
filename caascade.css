@@ -1,0 +1,17 @@
+#caascade-output {
+	margin:1em 0;
+	text-align:center;
+}
+
+.caascade-maxima-output { 
+  font-family:"Courier New", "Bitstream Charter", "courier", "sans-serif", monospace;
+	white-space:pre;
+}
+
+input.caascade[type="text"] { 
+  letter-spacing:0.25em; 
+}
+
+#caascade_id { 
+  border-color:#ccc; 
+}
