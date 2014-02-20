@@ -25,6 +25,7 @@ The current version of the plugin provides the following forms for operations:
 6. `limit` - Compute the limit of an expression approaching from the left, right, or both
 7. `prime` - Primality test
 8. `omega` - Omega (raw Maxima command)
+9. `evaluate` - evaluate expression at expression
 
 At your `caascade.com` settings page, you can adjust settings for:
 
