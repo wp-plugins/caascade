@@ -1,11 +1,8 @@
 #caascade-output {
-	margin:1em 0;
-	text-align:center;
-}
-
-.caascade-maxima-output { 
+  margin:1em 0;
+  text-align:center;
   font-family:"Courier New", "Bitstream Charter", "courier", "sans-serif", monospace;
-	white-space:pre;
+  white-space:pre;
 }
 
 input.caascade[type="text"] { 
