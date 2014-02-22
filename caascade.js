@@ -17,8 +17,8 @@ jQuery(document).ready( function( $ )
         id: caascadeAjax.caascade_id,
       },
       success : function(data)
-      {
-        $('#caascade-output').html('<span class="caascade-maxima-output">' + data.output + '</span');
+      {	
+				$('#caascade-output').html('<span class="caascade-maxima-input">' + data.input + '</span><span class="caascade-maxima-output">' + data.output + '</span><span class="caascade-maxima-pdf">' + data.pdf + '</span>');
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
       },
     });

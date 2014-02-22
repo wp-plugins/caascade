@@ -3,7 +3,7 @@
  * Plugin Name: Caascade
  * Plugin URI: http://wp.tetragy.com/caascade
  * Description: Instant Mathematical Computing for the Wordpress public
- * Version: 1.0
+ * Version: 1.1
  * Author: Tetragy Limited
  * Author URI: https://caascade.com
  * License: GPLv2 or Later
@@ -97,9 +97,9 @@ add_shortcode( 'caascade', 'caascade_func' );
 add_action( 'init', 'caascade_script_enqueuer' );
 
 function caascade_script_enqueuer() {
-	wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery'), '1.0', true);
-	wp_register_script("mathjax_script", "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.0', false);
-	wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.0', 'all');
+	wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery'), '1.1', true);
+	wp_register_script("mathjax_script", "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.1', false);
+	wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.1', 'all');
 	wp_localize_script('caascade_script', 'caascadeAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'caascade_id' => get_option('caascade_id', '')));        
 
 	wp_enqueue_script('mathjax_script');
