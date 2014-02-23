@@ -3,7 +3,7 @@ Contributors: pmagunia
 Tags: math,education
 Requires at least: 2.7
 Tested up to: 3.6.1
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,9 +50,9 @@ Please send operation and feature requests, bug reports, feedback, and support q
 == Installation ==
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
-2. Register for a free Caascade.com account. Only a valid email address is required which will be verified. While you are there note your numeric user ID and whitelist the IP addresses your server is using in the account settings page.
+2. Register for a free Caascade.com account. After you have verified your email address, note your numeric user ID and whitelist the IP addresses your server is using in the account settings page.
 3. Go to the Caascade Settings page of your Wordpress site and save your unique numeric ID. This is available in the Wordpress Dashboard under the Settings menu.
-4. Finally, when you are editing a page, tell Wordpress to include the operation form using shortcode syntax. The `com` atribute will be the lowercase filename of any operation in the Caascade plugin folder named `html` (Do not include `.html` at the end.) Here is an example: `[caascade com="prime"]`.
+4. Finally, when you are editing a page, tell Wordpress to include the operation form using shortcode syntax. The `com` atribute will be the lowercase operation name. Here is an example: `[caascade com="prime"]`.
 
 Thats it. When you preview or view the page, you can enter the operations arguments to receive output. If you do not enter a required argument you will get back a Maxima syntax error. CSS may need to be added to help the form blend into your particular site. Some basic style is added already.
 
@@ -63,28 +63,30 @@ Thats it. When you preview or view the page, you can enter the operations argume
 
 == Frequently Asked Questions ==
 
+Do I need Maxima installed on my server ?
+
+No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements.
+
 How come its not free ?
 
 Maxima is GPL licensed, but Tetragy pays for each server by the hour. To make the service viable for the future there is a monthly charge for additional requests beyond the allotted monthly limit. If you would like to experiment with additional requests please send an email to the Caascade admin. Bitcoin is also welcome as a form of payment.
 
 How come I need a subscription for the Omega command ?
 
-Maxima operations can be quite time-consuming depending on the request. To prevent other users from experiencing a lag in service, Omega subscribers are given their own dedicated server with custom hardware configuration. Omega servers can take up to 2 business days to setup though the alpha, beta, and gamma subsciption servers take only a few minutes to boot. The 125 free requests are available immediately after verifying an email address.
+Maxima operations can be quite time-consuming depending on the request. To prevent other users from experiencing a lag in service, Omega subscribers are given their own dedicated server with custom hardware configuration. Omega servers can take up to 2 business days to setup. Gamma subsciption servers take only a few minutes to boot once payment is received. The 125 free requests included in the Basic subscription are available immediately after verifying an email address.
 
 
 Will I get my own server ?
 
-For the Omega and Gamma subsciptions, yes: users are provided an unshared server. With the basic, alpha, and beta subscriptions you may get your own server depending on the system load at the time but most likely not.
+For the Omega and Gamma subsciptions, yes: users are provided an unshared server.
 
-All calls are routed through a central server whose responsibity is getting your particular request to the correct server for processing. Network traffic is monitored for bottlenecks. If your users are experiencing a delay of more than a few seconds, please contact the caascade admin.
+All calls are routed through a central server whose responsibity is getting your particular request to the correct server for computing. Network traffic is monitored for bottlenecks. If your users are experiencing a delay of more than a few seconds, please contact the caascade admin.
 
-4. What is the difference between a Gamma and Omega server ?
+What is the difference between a Gamma and Omega server ?
 
 Though both subscriptions offer an unshared server, the Omega server is more capable as it is configured with additional RAM, disk space, and cores. The Omega server also has faster network connection.
 
-The Gamma server is identical to what alpha and beta subscribers use though it is unshared.
-
-5. Where can I go to find out more about the underlying software ?
+Where can I go to find out more about the underlying software ?
 
 - http://maxima.sourceforge.net
 - http://www.latex-project.org
@@ -102,6 +104,8 @@ The Gamma server is identical to what alpha and beta subscribers use though it i
 
 1.1 Add PDF functionality, CSS improvements, add evaluate operation
 
+1.1.1 Fix Author URI, clarify README.txt, add MathJax as a dependency for the `caascade.js` script
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -110,4 +114,5 @@ Initial commit
 =1.1 =
 Recommended for all users. New features and stability improvements.
 
-
+=1.1.1 =
+No functional changes. Minor improvement to documentation and JS enqueue
