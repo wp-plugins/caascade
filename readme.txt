@@ -1,5 +1,5 @@
 === Caascade ===
-Contributors: pmagunia
+Contributors: Tetragy
 Tags: math,education
 Requires at least: 2.7
 Tested up to: 3.6.1
