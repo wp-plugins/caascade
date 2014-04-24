@@ -1,0 +1,15 @@
+#caascade-output {
+  margin:1.5em 0 1em;
+  text-align:center;
+  font-family:"Courier New", "Bitstream Charter", "courier", "sans-serif", monospace;
+  white-space:pre;
+	line-height:1;
+}
+
+input.caascade[type="text"] { 
+  letter-spacing:0.25em; 
+}
+
+#caascade_id { 
+  border-color:#ccc; 
+}
