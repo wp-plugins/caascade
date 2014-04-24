@@ -42,40 +42,31 @@ At your `caascade.com` settings page, you can adjust settings for:
 
 You can get an idea for what may be possible by perusing the Maxima 5.31.3 manual.
 
-The Caascade free Basic subscription comes with 125 requests per month. Please note that to format TeX output from the Caascade server, a request is made to the MathJax SSL CDN. The output will be sent over a secure connection. The MathJax CDN that you will find in the plugin is:
+The Caascade free Basic subscription comes with 125 requests per month.
 
-`https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js`
+Please note that to format TeX output from the Caascade server, a request is made to the MathJax SSL CDN using JavaScript.
 
-Please send operation and feature requests, bug reports, feedback, and support questions to the Wordpress Caascade issue queue.
 
 == Installation ==
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
-2. Register for a free Caascade.com account. After you have verified your email address, note your numeric user ID and whitelist the IP addresses your server is using in the account settings page.
+2. Register for a free Caascade.com account. Note your numeric user ID and list the IP addresses your web server is using at the caascade.com user settings page.
 3. Go to the Caascade settings page of your Wordpress site and save your unique numeric ID. This is available in the Wordpress dashboard under the settings menu.
 4. Finally, when you are editing a page, tell Wordpress to include the operation form using shortcode syntax. The `com` atribute will be the lowercase operation name. Here is an example: `[caascade com="prime"]`.
 
-Thats it. When you preview or view the page, you can enter the operations arguments to receive output. If you do not enter a required argument you will get back a Maxima syntax error. CSS may need to be added to help the form blend into your particular site. Some basic style is added already.
-
-
- 
- 
+CSS may need to be added to help the form blend into your particular site.
 
 
 == Frequently Asked Questions ==
 
 Why do I get a message saying 'IP not whitelisted' ?
 
-All users are required to list their server's IP address in their `caascade.com` user settings page. This prevents spam requests and also unauthorized requests using your account.
+All users are required to list their web server's IP address at their `caascade.com` user settings page. This information is private and prevents unauthorized requests using your account.
+
 
 Do I need Maxima installed on my server ?
 
 No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements.
-
-
-How come I need a subscription for the Omega command ?
-
-Maxima operations can be quite time-consuming depending on the request. To prevent other users from experiencing a lag in service, Omega subscribers are given their own dedicated server with custom hardware configuration. Omega servers can take up to 2 business days to setup. Gamma subsciption servers take only a few minutes to boot once payment is received. The 125 free requests included in the Basic subscription are available immediately after verifying an email address.
 
 
 Where can I go to find out more about the underlying software ?
