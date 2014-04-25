@@ -115,10 +115,10 @@ function prefix_ajax_caascade_compute() {
 
 	$fields['id'] = $_REQUEST['id'];
 	$fields['cmd'] = $_REQUEST['cmd'];
-	$fields['arg0'] = $_REQUEST['arg0'];
-	$fields['arg1'] = $_REQUEST['arg1'];
-	$fields['arg2'] = $_REQUEST['arg2'];
-	$fields['arg3'] = $_REQUEST['arg3'];
+	$fields['arg0'] = urlencode($_REQUEST['arg0']);
+	$fields['arg1'] = urlencode($_REQUEST['arg1']);
+	$fields['arg2'] = urlencode($_REQUEST['arg2']);
+	$fields['arg3'] = urlencode($_REQUEST['arg3']);
 	$fields_string = '';
 	foreach($fields as $key => $value)
 	{
