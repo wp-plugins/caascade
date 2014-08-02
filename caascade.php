@@ -105,8 +105,7 @@ add_shortcode( 'caascade', 'caascade_func' );
 add_action( 'init', 'caascade_script_enqueuer' );
 
 function caascade_script_enqueuer() {
-  wp_register_script("mathjax_config_script", WP_PLUGIN_URL . '/caascade/mathjax_config.js', array('jquery', 'mathjax_config_script'), '1.2.0', true);
-  wp_register_script("mathjax_script", "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.2.0', false);
+  wp_register_script("mathjax_script", "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.2.0', false);
   wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery', 'mathjax_script'), '1.2.0', true);
   wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.2.0', 'all');
   wp_localize_script('caascade_script', 'caascadeAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'caascade_id' => get_option('caascade_id', '')));        

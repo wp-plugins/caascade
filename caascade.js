@@ -1,4 +1,5 @@
 jQuery(document).ready( function($)
+{
   $('.caascade-submit').click(function()
   {
     cid = '#' + $(this).parent('div').parent('div').attr('id')

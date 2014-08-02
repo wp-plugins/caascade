@@ -93,4 +93,5 @@ Add override feature so customized code is not lost with plugin upgrade
 Support multiple operations on the same page
 Remove tab whitespace for repository browsing
 Improve class and and id attribute structuring
+Update MathJax CDN address
 
