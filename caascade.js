@@ -5,17 +5,18 @@ jQuery(document).ready( function($)
     cid = '#' + $(this).parent('div').parent('div').attr('id')
     $(cid + ' .caascade-waiting').animate({opacity:1,height:'toggle'})
     $(cid + ' .caascade-output').animate({opacity:0,height:'toggle'})
-    $.ajax({
-      type : 'GET',
-      url : Drupal.settings.caascade.path,
-      dataType : 'jsonp',
+    jQuery.ajax({
+      type : 'post',
+      url : caascadeAjax.ajaxurl,
+      dataType : 'json',
       data: {
+        action: "caascade_compute",
         arg0: $(cid + ' .caascade-arg0').val(),
         arg1: $(cid + ' .caascade-arg1').val(),
         arg2: $(cid + ' .caascade-arg2').val(),
         arg3: $(cid + ' .caascade-arg3').val(),
         cmd:  $(cid + ' .caascade-cmd').val(),
-        id: Drupal.settings.caascade.id,
+        id: caascadeAjax.caascade_id,
       },
       success : function(data)
       {

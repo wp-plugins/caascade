@@ -91,12 +91,13 @@ function caascade_func( $atts ) {
   # if users wants to override packaged file
   if(is_file(__DIR__ . '/html/override/' . $com . '.html'))
   {
-    $markup = '<div class="caascade">' . file_get_contents(__DIR__ . '/html/override/' . $com . '.html') . '</div>';
+    $markup = file_get_contents(__DIR__ . '/html/override/' . $com . '.html');
   }
   else
   {
      $markup = file_get_contents(__DIR__ . '/html/' . $com . '.html');
   }
+	$markup = '<div class="caascade-cp">' . $markup . '</div>';
 	return '<div class="caascade" id="caascade-' . $com .'">' . $markup . $dialog . '</div>';
 }
 
