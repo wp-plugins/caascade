@@ -1,6 +1,6 @@
 input[type="hidden"], .caascade-waiting { display:none; }
 
-.caascade-cp input[type="button"] { margin:0; }
+.caascade-cp input[type="button"] { margin:0 1em 0 0; }
 
 .caascade-cp input[type="text"] { width:5em;margin:0 1em; }
 
@@ -16,9 +16,7 @@ input[type="hidden"], .caascade-waiting { display:none; }
 
 .caascade-out-pdf { text-align:left; }
 
-.caascade-dialog pre { text-align:left;padding-left:10%; }
+.caascade-dialog pre { text-align:left;padding-left:7%; }
 
-.caascade-out-error { color:pink; }
-
-.center { text-align:center; }
+.caascade-out-output img { padding-left:7%; }
 
