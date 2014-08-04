@@ -129,6 +129,9 @@ function prefix_ajax_caascade_compute() {
   $fields['arg1'] = urlencode($_REQUEST['arg1']);
   $fields['arg2'] = urlencode($_REQUEST['arg2']);
   $fields['arg3'] = urlencode($_REQUEST['arg3']);
+  $fields['arg4'] = urlencode($_REQUEST['arg4']);
+  $fields['arg5'] = urlencode($_REQUEST['arg5']);
+  $fields['arg6'] = urlencode($_REQUEST['arg6']);
   $fields_string = '';
   foreach($fields as $key => $value)
   {
