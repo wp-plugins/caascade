@@ -34,21 +34,23 @@ function plugin_admin_add_page()
 
 function caascade_plugin_settings_page()
 { ?>
-  <div class="wp-caascade-admin">
-    <h2>Caascade Settings</h2>
-    <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode. A <a href="https://caascade.com">Caascade.com</a> account is necessary to receive computational output.</p>
-    <div>
-      <form action="options.php" method="post">
-        <?php settings_fields('caascade_plugin_settings'); ?>
-        <?php do_settings_sections('caascade'); ?>
-        <br/>
-        <div class-"wp-caascade-submit">
-        <input name="Submit" type="submit" value="<?php esc_attr_e('Save'); ?>" />
-        </div>
-      </form>
+  <div class="wrap">
+    <div class="wp-caascade-admin">
+      <h2>Caascade Settings</h2>
+      <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode. A <a href="https://caascade.com">Caascade.com</a> account is necessary to receive computational output.</p>
+      <div>
+        <form action="options.php" method="post">
+          <?php settings_fields('caascade_plugin_settings'); ?>
+          <?php do_settings_sections('caascade'); ?>
+          <br/>
+          <div class-"wp-caascade-submit">
+          <input name="Submit" type="submit" value="<?php esc_attr_e('Save'); ?>" />
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-<?php }
+  <?php }
 
 add_action('admin_init', 'caascade_plugin_admin_init');
 
