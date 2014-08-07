@@ -15,24 +15,26 @@ Caascade follows the computation-as-a-service model. Using Wordpress Shortcode, 
 
 The current version of the plugin provides for the following operations:
 
-`defint`
-`derivative`
-`expand`
-`factor`
-`integrate`
-`limit`
-`prime`
-`omega`
-`evaluate`
-`exponent`
-`add`
-`subtract`
-`multiply`
-`divide`
-`>`
-`>=`
-`<`
-`<=`
+defint
+derivative
+expand
+factor
+integrate
+limit
+prime
+omega
+evaluate
+exponent
+add
+subtract
+multiply
+divide
+>
+>=
+<
+<=
+plot2D
+plot3D
 
 Using your registered Caascade account, you can adjust settings for:
 
