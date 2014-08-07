@@ -29,10 +29,7 @@ add
 subtract
 multiply
 divide
->
->=
-<
-<=
+relational operators
 plot2D
 plot3D
 
