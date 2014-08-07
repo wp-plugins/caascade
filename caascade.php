@@ -9,7 +9,7 @@
  * License: GPLv2 or Later
  */
 
-/*  Copyright 2014  Tetragy Limited  (email: admin@tetragy.com)
+/*  Copyright 2014  Tetragy Limited
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -37,7 +37,7 @@ function caascade_plugin_settings_page()
   <div class="wrap">
     <div class="wp-caascade-admin">
       <h2>Caascade Settings</h2>
-      <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode. A <a href="https://caascade.com">Caascade.com</a> account is necessary to receive computational output.</p>
+      <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode. A Caascade account is necessary to receive computational output.</p>
       <div>
         <form action="options.php" method="post">
           <?php settings_fields('caascade_plugin_settings'); ?>
@@ -63,7 +63,7 @@ function caascade_plugin_admin_init()
 
 function caascade_section_text()
 {
-  echo '<p>The Caascade <a href="https://caascade.com/user">account settings</a> will list your numeric ID. The ID listed here will be submitted with all Caascade requests. Whitelisting your server\'s IP address is also necessary to receive output.</p>';
+  echo '<p>Your Caascade account page will list your numeric ID. The ID listed here will be submitted with all Caascade requests.</p>';
 }
 
 function caascade_setting_string()
