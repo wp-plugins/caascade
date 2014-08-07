@@ -2,8 +2,8 @@
 Contributors: Tetragy
 Tags: math,education
 Requires at least: 2.7
-Tested up to: 3.6.1
-Stable tag: 1.1.2
+Tested up to: 3.9.2
+Stable tag: 1.2.0
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,4 +97,5 @@ Support multiple operations on the same page
 Remove tab whitespace for repository browsing
 Improve class and and id attribute structuring
 Update MathJax CDN address
+Plot2D and Plot3D
 
