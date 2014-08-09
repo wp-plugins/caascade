@@ -23,6 +23,14 @@ jQuery(document).ready( function($)
       },
       success : function(data)
       {
+        if(data.input.match(/\$(.*)\$/g) == null)
+        {
+          data.input = '<pre>' + data.input + '</pre>'
+        }
+        if(data.output.match(/\$(.*)\$/g) == null)
+        {
+          data.output = '<pre>' + data.output + '</pre>'
+        }
         $(cid + ' .caascade-output').html('<div class="caascade-out-input"><div class="caascade-prompt caascade-prompt-i">%i1</div>' + data.input + '</div><div class="caascade-out-output"><div class="caascade-prompt caascade-prompt-o">%o1</div>' + data.output + '</div><div class="caascade-out-pdf">' + data.pdf + '</div>')
         MathJax.Hub.Queue(["Typeset",MathJax.Hub])
         $(cid + ' .caascade-waiting').animate({opacity:0,height:'toggle'})
