@@ -159,15 +159,14 @@ function caascade_func( $atts ) {
   }
   $publickey = get_option('caascade_recaptcha_publickey');
   $theme = get_option('caascade_recaptcha_theme');
-  $recap = '<div id="caascade-recaptcha">';
   if(strlen($publickey))
   {
     require_once 'recaptchalib.php';
-    $recap .= "<script type='text/javascript'>var RecaptchaOptions = { theme : '$theme'}</script>" . recaptcha_get_html($publickey, null, true);
+    # support multiple reCaptcha
+    $recap = '<div id="caascade-recaptcha-' . rand(10000, 99999) . '" class="caascade-recaptcha"></div>';
   }
-  $recap .= '</div>';
-	$markup = '<div class="caascade-cp">' . $markup . '</div>';
-	return $recap . '<div class="caascade" id="caascade-' . $com .'">' . $markup . $dialog . '</div>';
+  $markup = '<div class="caascade-cp">' . $markup . '</div>';
+  return $recap . '<div class="caascade" id="caascade-' . $com .'">' . $markup . $dialog . '</div>';
 }
 
 add_shortcode( 'caascade', 'caascade_func' );
@@ -175,13 +174,14 @@ add_shortcode( 'caascade', 'caascade_func' );
 add_action( 'init', 'caascade_script_enqueuer' );
 
 function caascade_script_enqueuer() {
+  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.3.0', false);
   wp_register_script("mathjax_script", "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.3.0', false);
   wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery', 'mathjax_script'), '1.3.0', true);
   wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.3.0', 'all');
-  wp_localize_script('caascade_script', 'caascadeAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'caascade_id' => get_option('caascade_id', '')));        
+  wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
 
+  wp_enqueue_script('recaptcha_script');
   wp_enqueue_script('mathjax_script');
-  wp_enqueue_script('jquery');
   wp_enqueue_script('caascade_script');
   wp_enqueue_style('caascade_css');
 }

@@ -24,4 +24,5 @@ input[type="hidden"], .caascade-waiting { display:none; }
 
 .caascade-cp { line-height:3em; }
 
-#caascade-recaptcha { width:460px; }
+.caascade-recaptcha { width:460px; }
+

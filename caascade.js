@@ -1,5 +1,13 @@
 jQuery(document).ready( function($)
 {
+  pubkey = caascadeAjax.recaptcha_pubkey
+  if(pubkey.length)
+  {
+    recap_theme = caascadeAjax.recaptcha_theme
+    recap_div = $('.caascade-recaptcha:first').attr('id')
+    Recaptcha.create(pubkey, recap_div, { theme: recap_theme, callback: Recaptcha.focus_response_field })
+  }
+
   $('.caascade-submit').click(function()
   {
     cid = '#' + $(this).parent('div').parent('div').attr('id')
