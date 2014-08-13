@@ -45,7 +45,7 @@ jQuery(document).ready( function($)
         MathJax.Hub.Queue(["Typeset",MathJax.Hub])
         $(cid + ' .caascade-waiting').animate({opacity:0,height:'toggle'})
         $(cid + ' .caascade-output').animate({opacity:1,height:'toggle'})
-        Recaptcha.reload();
+        Recaptcha.reload_internal('t');
       },
     })
     return false;
