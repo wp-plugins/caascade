@@ -1,6 +1,6 @@
 === Caascade ===
 Contributors: Tetragy
-Tags: math,education
+Tags: math,education,shortcode,page,post
 Requires at least: 2.7
 Tested up to: 3.9.2
 Stable tag: 1.3.0
