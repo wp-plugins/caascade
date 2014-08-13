@@ -48,8 +48,9 @@ Using your registered Caascade account, you can adjust settings for:
 == Installation ==
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
-2. Visit the Caascade settings page of your Wordpress site to configure your ID
-3. Use shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
+2. Visit the Caascade settings page of your Wordpress site to configure your ID.
+3. Whitelist your server IP address or disable enforcing.
+4. Use shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
 
 To prevent unauthorized use of your Caascade account, you may whitelist server IP addresses.
 
@@ -61,18 +62,20 @@ No, Maxima does not need to be installed on your server. Wordpress and the Caasc
 
 2. I've got public-facing Caascade forms. How do I prevent spam submissions ?
 
-With reCaptcha keys you can help prevent spam and other abuse of your Caascade account requests. Configure these settings to add a reCaptcha form to all your widgets. The Wordpress module also includes support for reCaptcha themes.
+With reCaptcha keys you can help prevent spam and other abuse of your Caascade account requests. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. The Wordpress module also includes support for reCaptcha themes.
 
 References
 
-http://maxima.sourceforge.net
-http://www.latex-project.org
-http://www.mathjax.org
-https://math.tetragy.com
+- http://maxima.sourceforge.net
+- http://www.latex-project.org
+- http://www.mathjax.org
+- https://math.tetragy.com
 
 == Screenshots ==
 
-1. Test of primality operation using the 2012 theme
+1. Test of primality operation on the integer '113'
+2. plot2D screenshot of log(x) on (-1,1)
+3. plot3D screenshot of log(x) on (-1,1)
 
 == Changelog ==
 1.0 Initial commit
