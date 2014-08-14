@@ -64,6 +64,10 @@ No, Maxima does not need to be installed on your server. Wordpress and the Caasc
 
 With reCaptcha keys you can help prevent spam and other abuse of your Caascade account requests. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. The Wordpress module also includes support for reCaptcha themes.
 
+3. Why does my request hang after it says 'Computing...'
+
+Check your router settings on the Caascade options page. The default address is 'https://route.tetragy.com'.
+
 References
 
 - http://maxima.sourceforge.net

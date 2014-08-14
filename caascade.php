@@ -56,13 +56,15 @@ add_action('admin_init', 'caascade_plugin_admin_init');
 
 function caascade_plugin_admin_init()
 {
-  register_setting( 'caascade_plugin_settings', 'caascade_id', 'caascade_settings_validate' );
+  register_setting( 'caascade_plugin_settings', 'caascade_id', 'caascade_settings_validate');
+  register_setting( 'caascade_plugin_settings', 'caascade_router', 'caascade_settings_router_validate');
   register_setting( 'caascade_plugin_settings', 'caascade_recaptcha_publickey', 'caascade_recaptcha_publickey_validate');
   register_setting( 'caascade_plugin_settings', 'caascade_recaptcha_privatekey', 'caascade_recaptcha_privatekey_validate');
   register_setting( 'caascade_plugin_settings', 'caascade_recaptcha_theme', 'caascade_recaptcha_theme_validate');
-  add_settings_section('caascade_options', 'Numeric ID', 'caascade_section_text', 'caascade');
+  add_settings_section('caascade_options', 'Caascade', 'caascade_section_text', 'caascade');
   add_settings_section('caascade_recaptcha_options', 'reCaptcha', 'caascade_recaptcha_text', 'caascade');
   add_settings_field('caascade_id', 'Caascade Numeric ID', 'caascade_setting_string', 'caascade', 'caascade_options');
+  add_settings_field('caascade_router', 'Caascade Router', 'caascade_setting_router', 'caascade', 'caascade_options');
   add_settings_field('caascade_recaptcha_publickey', 'reCaptcha Public Key', 'caascade_setting_recaptcha_publickey', 'caascade', 'caascade_recaptcha_options');
   add_settings_field('caascade_recaptcha_privatekey', 'reCaptcha Private Key', 'caascade_setting_recaptcha_privatekey', 'caascade', 'caascade_recaptcha_options');
   add_settings_field('caascade_recaptcha_theme', 'reCaptcha Theme', 'caascade_setting_recaptcha_theme', 'caascade', 'caascade_recaptcha_options');
@@ -82,6 +84,12 @@ function caascade_setting_string()
 {
   $id = get_option('caascade_id');
   echo "<input id='caascade_id' name='caascade_id' size='10' type='text' value='$id' />";
+}
+
+function caascade_setting_router()
+{
+  $router = get_option('caascade_router', 'https://route.tetragy.com');
+  echo "<input id='caascade_router' name='caascade_router' size='30' type='text' value='$router' />";
 }
 
 function caascade_setting_recaptcha_publickey()
@@ -110,6 +118,15 @@ function caascade_settings_validate($id)
     $id = '';
   }
   return $id;
+}
+
+function caascade_settings_router_validate($router)
+{
+  if(strlen($router) > 100)
+  {
+    $router = 'https://route.tetragy.com';
+  }
+  return $router;
 }
 
 function caascade_recaptcha_publickey_validate($publickey)
@@ -218,7 +235,7 @@ function prefix_ajax_caascade_compute() {
   $fields_string = rtrim($fields_string, '&');
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_URL, 'https://route.tetragy.com/index.php?' . $fields_string);
+  curl_setopt($ch, CURLOPT_URL, get_option('caascade_router', 'https://route.tetragy.com') . '/index.php?' . $fields_string);
   curl_setopt($ch, CURLOPT_HEADER, 0);
   echo curl_exec($ch);
   curl_close($ch);
