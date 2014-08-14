@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Caascade
- * Plugin URI: http://wp.tetragy.com/caascade
+ * Plugin URI: http://wp.tetragy.com
  * Description: Instant Mathematical Computing for the Wordpress public
  * Version: 1.3.0
  * Author: Tetragy Limited
@@ -25,11 +25,21 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-add_action('admin_menu', 'plugin_admin_add_page');
-
-function plugin_admin_add_page()
+# settings menu link
+add_action('admin_menu', 'caascade_admin_add_page');
+function caascade_admin_add_page()
 {
-  add_options_page('Settings', 'Caascade', 'manage_options', 'plugin', 'caascade_plugin_settings_page');
+  add_options_page('Settings', 'Caascade', 'manage_options', 'Caascade', 'caascade_plugin_settings_page');
+}
+
+# plugin page settings link
+$plugin = plugin_basename(__FILE__); 
+add_filter("plugin_action_links_$plugin", 'caascade_plugin_settings_link' );
+function caascade_plugin_settings_link($links)
+{ 
+  $settings_link = '<a href="options-general.php?page=Caascade">Settings</a>'; 
+  array_unshift($links, $settings_link); 
+  return $links; 
 }
 
 function caascade_plugin_settings_page()
