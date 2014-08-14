@@ -209,13 +209,15 @@ add_action("wp_ajax_nopriv_caascade_compute", "prefix_ajax_caascade_compute");
 function prefix_ajax_caascade_compute() {
 
   require_once('recaptchalib.php');
-  $privatekey = get_option('caascade_recaptcha_privatekey');
-  $resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_REQUEST["recaptcha_challenge_field"], $_REQUEST["recaptcha_response_field"]);
-
-  if(!$resp->is_valid)
+  $privatekey = get_option('caascade_recaptcha_privatekey', '');
+  if(strlen($privatekey))
   {
-    echo '{"input":"","output":"The reCAPTCHA wasn\'t entered correctly. Go back and try it again.","pdf":""}';
-    die();
+    $resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_REQUEST["recaptcha_challenge_field"], $_REQUEST["recaptcha_response_field"]);
+    if(!$resp->is_valid)
+    {
+      echo '{"input":"","output":"The reCAPTCHA wasn\'t entered correctly. Go back and try it again.","pdf":""}';
+      die();
+    }
   }
 
   $fields['id'] = $_REQUEST['id'];

@@ -112,4 +112,5 @@ Plot2D and Plot3D
 
 =1.3.0 =
 reCaptcha support
+Summation and product operations
 
