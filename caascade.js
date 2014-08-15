@@ -27,6 +27,7 @@ jQuery(document).ready( function($)
         arg5: $(cid + ' .caascade-arg5').val(),
         arg6: $(cid + ' .caascade-arg6').val(),
         cmd:  $(cid + ' .caascade-cmd').val(),
+        pdf:  $(cid + ' .caascade-pdf:checked').val(),
         id: caascadeAjax.caascade_id,
         recaptcha_challenge_field: $('#recaptcha_challenge_field').val(),
         recaptcha_response_field: $('#recaptcha_response_field').val(),
