@@ -1,15 +1,33 @@
 jQuery(document).ready( function($)
 {
   pubkey = caascadeAjax.recaptcha_pubkey
-  if(pubkey.length)
-  {
-    recap_theme = caascadeAjax.recaptcha_theme
-    recap_div = $('.caascade-recaptcha:first').attr('id')
-    Recaptcha.create(pubkey, recap_div, { theme: recap_theme })
-  }
-
   $('.caascade-submit').click(function()
   {
+    cid = '#' + $(this).parent('div').parent('div').attr('id')
+    if(pubkey.length)
+    {
+      if($('#recaptcha_challenge_image').length == 0)
+      {
+        recap_theme = caascadeAjax.recaptcha_theme
+        var recap_div = $(cid + ' .caascade-recaptcha').attr('id')
+        Recaptcha.create(pubkey, recap_div, { theme: recap_theme })
+        return false;
+      }
+
+      if($('#recaptcha_response_field').val() == '')
+      {
+        if($(cid + ' .caascade-recaptcha #recaptcha_area').length)
+        {
+          alert('Recaptcha challenge response required')
+        }
+        else
+        {
+          $('#recaptcha_area').appendTo(cid + ' .caascade-recaptcha')
+        }
+        return false;
+      }
+    }
+
     cid = '#' + $(this).parent('div').parent('div').attr('id')
     $(cid + ' .caascade-waiting').animate({opacity:1,height:'toggle'})
     $(cid + ' .caascade-output').animate({opacity:0,height:'toggle'})

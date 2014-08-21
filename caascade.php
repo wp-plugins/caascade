@@ -186,14 +186,15 @@ function caascade_func( $atts ) {
   }
   $publickey = get_option('caascade_recaptcha_publickey');
   $theme = get_option('caascade_recaptcha_theme');
+  $recap = '';
   if(strlen($publickey))
   {
     require_once 'recaptchalib.php';
     # support multiple reCaptcha
-    $recap = '<div id="caascade-recaptcha-' . rand(10000, 99999) . '" class="caascade-recaptcha"></div>';
+    $recap = '<div class="caascade-recaptcha" id="caascade-recaptcha-' . rand(10000,99999) . '"></div>';
   }
   $markup = '<div class="caascade-cp">' . $markup . '</div>';
-  return $recap . '<div class="caascade" id="caascade-' . $com .'">' . $markup . $dialog . '</div>';
+  return '<div class="caascade" id="caascade-' . $com .'">' . $markup . $dialog . $recap . '</div>';
 }
 
 add_shortcode( 'caascade', 'caascade_func' );
