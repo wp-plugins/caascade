@@ -1,7 +1,7 @@
 === Caascade ===
 Contributors: Tetragy
 Tags: math,education,shortcode
-Requires at least: 2.7
+Requires at least: 3.9.2
 Tested up to: 3.9.2
 Stable tag: 1.3.0
 License: GPLv2  or later
@@ -47,12 +47,14 @@ Using your registered Caascade account, you can adjust settings for:
 
 == Installation ==
 
+To use the module, php5-curl and apache2 rewrite module must be installed and enabled.
+
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
 2. Visit the Caascade settings page of your Wordpress site to configure your ID.
 3. Whitelist your server IP address or disable enforcing.
 4. Use shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
 
-To prevent unauthorized use of your Caascade account, you may whitelist server IP addresses.
+To prevent unauthorized use of your Caascade account, you may whitelist your web server IP addresses.
 
 == Frequently Asked Questions ==
 
