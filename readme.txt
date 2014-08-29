@@ -1,9 +1,9 @@
 === Caascade ===
 Contributors: Tetragy
-Tags: math,education
-Requires at least: 2.7
+Tags: math,education,shortcode
+Requires at least: 3.9.2
 Tested up to: 3.9.2
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,11 @@ Caascade allows the Wordpress public to request output from the Maxima CAS.
 
 == Description ==
 
-Caascade follows the computation-as-a-service model. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Readers can enter expressions which are evaluated by a Caascade server. The output from running the operation is captured and returned as a MathJax formatted PNG.
+New: Support for reCaptcha now included in v1.3.0.
+
+Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Users can enter expressions which are evaluated by a Caascade server. The output from running the operation is captured and returned in a format chosen by the plugin admin. Notable features include PDF and reCaptcha support.
+
+The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with site content.
 
 The current version of the plugin provides for the following operations:
 
@@ -46,27 +50,32 @@ Using your registered Caascade account, you can adjust settings for:
 == Installation ==
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
-2. Visit the Caascade settings page of your Wordpress site to configure your ID
-3. Use shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
-
-To prevent unauthorized use of your Caascade account, you may whitelist server IP addresses.
+2. Visit the WP Caascade settings page of your Wordpress site to configure your ID.
+3. Whitelist your server IP address or disable enforcing.
+4. Use Shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
 
 == Frequently Asked Questions ==
 
-Do I need Maxima installed on my server ?
+1. Do I need Maxima installed on my server ?
 
-No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements.
+No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade numeric ID.
+
+2. I've got public Caascade forms. How do I prevent spam submissions ?
+
+With reCaptcha you can help prevent spam and other abuse of your Caascade account requests. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
 
 References
 
-http://maxima.sourceforge.net
-http://www.latex-project.org
-http://www.mathjax.org
-https://math.tetragy.com
+- http://maxima.sourceforge.net
+- http://www.latex-project.org
+- http://www.mathjax.org
+- https://math.tetragy.com
 
 == Screenshots ==
 
-1. Test of primality operation using the 2012 theme
+1. Test of primality operation on the integer '113'
+2. plot2D screenshot of log(x) on (-1,1)
+3. plot3D screenshot of log(x) on (-1,1)
 
 == Changelog ==
 1.0 Initial commit
@@ -96,4 +105,9 @@ Remove tab whitespace for repository browsing
 Improve class and and id attribute structuring
 Update MathJax CDN address
 Plot2D and Plot3D
+
+=1.3.0 =
+reCaptcha support
+Summation and product operations
+Inline PDF support
 

@@ -1,7 +1,33 @@
 jQuery(document).ready( function($)
 {
+  pubkey = caascadeAjax.recaptcha_pubkey
   $('.caascade-submit').click(function()
   {
+    cid = '#' + $(this).parent('div').parent('div').attr('id')
+    if(pubkey.length)
+    {
+      if($('#recaptcha_challenge_image').length == 0)
+      {
+        recap_theme = caascadeAjax.recaptcha_theme
+        var recap_div = $(cid + ' .caascade-recaptcha').attr('id')
+        Recaptcha.create(pubkey, recap_div, { theme: recap_theme })
+        return false;
+      }
+
+      if($('#recaptcha_response_field').val() == '')
+      {
+        if($(cid + ' .caascade-recaptcha #recaptcha_area').length)
+        {
+          alert('Recaptcha challenge response required')
+        }
+        else
+        {
+          $('#recaptcha_area').appendTo(cid + ' .caascade-recaptcha')
+        }
+        return false;
+      }
+    }
+
     cid = '#' + $(this).parent('div').parent('div').attr('id')
     $(cid + ' .caascade-waiting').animate({opacity:1,height:'toggle'})
     $(cid + ' .caascade-output').animate({opacity:0,height:'toggle'})
@@ -19,7 +45,10 @@ jQuery(document).ready( function($)
         arg5: $(cid + ' .caascade-arg5').val(),
         arg6: $(cid + ' .caascade-arg6').val(),
         cmd:  $(cid + ' .caascade-cmd').val(),
+        pdf:  $(cid + ' .caascade-pdf:checked').val(),
         id: caascadeAjax.caascade_id,
+        recaptcha_challenge_field: $('#recaptcha_challenge_field').val(),
+        recaptcha_response_field: $('#recaptcha_response_field').val(),
       },
       success : function(data)
       {
@@ -35,6 +64,10 @@ jQuery(document).ready( function($)
         MathJax.Hub.Queue(["Typeset",MathJax.Hub])
         $(cid + ' .caascade-waiting').animate({opacity:0,height:'toggle'})
         $(cid + ' .caascade-output').animate({opacity:1,height:'toggle'})
+        if(pubkey.length)
+        {
+          Recaptcha.reload_internal('t');
+        }
       },
     })
     return false;
