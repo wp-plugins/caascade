@@ -247,12 +247,7 @@ function prefix_ajax_caascade_compute() {
     $fields_string .= $key . '=' . $value . '&';
   }
   $fields_string = rtrim($fields_string, '&');
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($ch, CURLOPT_URL, get_option('caascade_router', 'https://route.tetragy.com') . '/index.php?' . $fields_string);
-  curl_setopt($ch, CURLOPT_HEADER, 0);
-  echo curl_exec($ch);
-  curl_close($ch);
+  echo file_get_contents(get_option('caascade_router', 'https://route.tetragy.com') . '/index.php?' . $fields_string);
   die();
 }
 
