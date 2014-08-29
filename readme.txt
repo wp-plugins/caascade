@@ -13,7 +13,9 @@ Caascade allows the Wordpress public to request output from the Maxima CAS.
 
 New: Support for reCaptcha now included in v1.3.0.
 
-Caascade follows the computation-as-a-service model. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Readers can enter expressions which are evaluated by a Caascade server. The output from running the operation is captured and returned as a MathJax formatted PNG.
+Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Users can enter expressions which are evaluated by a Caascade server. The output from running the operation is captured and returned in a format chosen by the plugin admin. Notable features include PDF and reCaptcha support.
+
+The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with site content.
 
 The current version of the plugin provides for the following operations:
 
@@ -47,28 +49,20 @@ Using your registered Caascade account, you can adjust settings for:
 
 == Installation ==
 
-To use the module, php5-curl and apache2 rewrite module must be installed and enabled.
-
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
-2. Visit the Caascade settings page of your Wordpress site to configure your ID.
+2. Visit the WP Caascade settings page of your Wordpress site to configure your ID.
 3. Whitelist your server IP address or disable enforcing.
-4. Use shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
-
-To prevent unauthorized use of your Caascade account, you may whitelist your web server IP addresses.
+4. Use Shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
 
 == Frequently Asked Questions ==
 
 1. Do I need Maxima installed on my server ?
 
-No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements.
+No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade numeric ID.
 
-2. I've got public-facing Caascade forms. How do I prevent spam submissions ?
+2. I've got public Caascade forms. How do I prevent spam submissions ?
 
-With reCaptcha keys you can help prevent spam and other abuse of your Caascade account requests. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. The Wordpress module also includes support for reCaptcha themes.
-
-3. Why does my request hang after it says 'Computing...'
-
-Check your router settings on the Caascade options page. The default address is 'https://route.tetragy.com'.
+With reCaptcha you can help prevent spam and other abuse of your Caascade account requests. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
 
 References
 
