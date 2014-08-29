@@ -47,7 +47,7 @@ function caascade_plugin_settings_page()
   <div class="wrap">
     <div class="wp-caascade-admin">
       <h2>Caascade Settings</h2>
-      <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode. A Caascade account is necessary to receive computational output.</p>
+      <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode. A Caascade account is necessary and may be obtained from https://math.tetragy.com by following the 'Account' link.</p>
       <div>
         <form action="options.php" method="post">
           <?php settings_fields('caascade_plugin_settings'); ?>
