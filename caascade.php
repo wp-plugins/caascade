@@ -3,7 +3,7 @@
  * Plugin Name: Caascade
  * Plugin URI: http://wp.tetragy.com
  * Description: Instant Mathematical Computing for the Wordpress public
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
