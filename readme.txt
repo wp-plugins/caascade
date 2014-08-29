@@ -3,7 +3,7 @@ Contributors: pmagunia
 Tags: math,education,shortcode
 Requires at least: 3.9.2
 Tested up to: 3.9.2
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,56 +56,81 @@ Using your registered Caascade account, you can adjust settings for:
 
 1. Do I need Maxima installed on my server ?
 
-No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade numeric ID.
+No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade ID.
 
-2. I've got public Caascade forms. How do I prevent spam submissions ?
+2. How do I prevent spam submissions ?
 
-With reCaptcha you can help prevent spam and other abuse of your Caascade account requests. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
+With reCaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
 
 References
 
 - http://maxima.sourceforge.net
 - http://www.latex-project.org
 - http://www.mathjax.org
+- http://www.google.com/recaptcha
 - https://math.tetragy.com
 
 == Screenshots ==
 
 1. Test of primality operation on the integer '113'
-2. plot2D screenshot of log(x) on (-1,1)
-3. plot3D screenshot of log(x) on (-1,1)
+2. plot3D screenshot of log(x) on (-1,1)
+3. plot2D screenshot of log(x) on (-1,1)
 
 == Changelog ==
-1.0 Initial commit
 
-1.1 Add PDF functionality, CSS improvements, add evaluate operation
+= 1.3.1 =
+* Fix bug where reCaptcha keys with hypen may not be saved 
 
-1.1.1 Fix Author URI, clarify README.txt, add MathJax as a dependency for the `caascade.js` script
+= 1.3.0 =
+* reCaptcha support
+* Summation and product operations
+* Inline PDF support
+
+= 1.2.0 =
+* Add override feature so customized code is not lost with plugin upgrade
+* Support multiple operations on the same page
+* Remove tab whitespace for repository browsing
+* Improve class and and id attribute structuring
+* Update MathJax CDN address
+* Plot2D and Plot3D
+
+= 1.1.2 =
+* Add arithmetic operators
+
+= 1.1.1 =
+* Fix Author URI
+* Clarify README.txt
+* Add MathJax as a dependency for the `caascade.js` script
+
+= 1.1 = 
+* Add PDF functionality
+* CSS improvements
+* add evaluate operation
+
+= 1.0 = 
+* Initial commit
+
 
 == Upgrade Notice ==
 
-= 1.0 =
-Initial commit
+= 1.3.1 =
+Necessary for certain reCaptcha users
 
-=1.1 =
-Recommended for all users. New features and stability improvements.
+= 1.3.0 =
+Recommended for users who need recaptcha and inline PDF options
 
-=1.1.1 =
-No functional changes. Minor improvement to documentation and JS enqueue
+= 1.2.0 =
+Recommended for users who want to display multiple blocks. New plotting operations.
 
-=1.1.2 =
+= 1.1.2 =
 Arithmetic operators
 
-=1.2.0 =
-Add override feature so customized code is not lost with plugin upgrade
-Support multiple operations on the same page
-Remove tab whitespace for repository browsing
-Improve class and and id attribute structuring
-Update MathJax CDN address
-Plot2D and Plot3D
+= 1.1.1 =
+No functional changes. Minor improvement to documentation and JS enqueue
 
-=1.3.0 =
-reCaptcha support
-Summation and product operations
-Inline PDF support
+= 1.1 =
+Recommended for all users. New features and stability improvements.
+
+= 1.0 =
+Initial commit
 

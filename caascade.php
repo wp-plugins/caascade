@@ -4,7 +4,7 @@
  * Plugin URI: http://wp.tetragy.com
  * Description: Instant Mathematical Computing for the Wordpress public
  * Version: 1.3.0
- * Author: Tetragy Limited
+ * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
  */
@@ -141,7 +141,7 @@ function caascade_settings_router_validate($router)
 
 function caascade_recaptcha_publickey_validate($publickey)
 {
-  if(!ctype_alnum($publickey) || strlen($publickey) > 100)
+  if(strlen($publickey) > 200)
   {
     $publickey = '';
   }
@@ -150,7 +150,7 @@ function caascade_recaptcha_publickey_validate($publickey)
 
 function caascade_recaptcha_privatekey_validate($privatekey)
 {
-  if(!ctype_alnum($privatekey) || strlen($privatekey) > 100)
+  if(strlen($privatekey) > 200)
   {
     $privatekey = '';
   }
