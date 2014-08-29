@@ -1,5 +1,5 @@
 === Caascade ===
-Contributors: Tetragy
+Contributors: pmagunia
 Tags: math,education,shortcode
 Requires at least: 3.9.2
 Tested up to: 3.9.2
