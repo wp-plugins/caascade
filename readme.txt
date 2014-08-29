@@ -47,6 +47,8 @@ Using your registered Caascade account, you can adjust settings for:
 
 == Installation ==
 
+A Caascade ID is necessary and may be obtained from https://math.tetragy.com by following the Account link.
+
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
 2. Visit the WP Caascade settings page of your Wordpress site to configure your ID.
 3. Whitelist your server IP address or disable enforcing.
