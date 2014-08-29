@@ -56,17 +56,18 @@ Using your registered Caascade account, you can adjust settings for:
 
 1. Do I need Maxima installed on my server ?
 
-No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade numeric ID.
+No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade ID.
 
-2. I've got public Caascade forms. How do I prevent spam submissions ?
+2. How do I prevent spam submissions ?
 
-With reCaptcha you can help prevent spam and other abuse of your Caascade account requests. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
+With reCaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
 
 References
 
 - http://maxima.sourceforge.net
 - http://www.latex-project.org
 - http://www.mathjax.org
+- http://www.google.com/recaptcha
 - https://math.tetragy.com
 
 == Screenshots ==
@@ -87,16 +88,16 @@ References
 = 1.0 =
 Initial commit
 
-=1.1 =
+= 1.1 =
 Recommended for all users. New features and stability improvements.
 
-=1.1.1 =
+= 1.1.1 =
 No functional changes. Minor improvement to documentation and JS enqueue
 
-=1.1.2 =
+= 1.1.2 =
 Arithmetic operators
 
-=1.2.0 =
+= 1.2.0 =
 Add override feature so customized code is not lost with plugin upgrade
 Support multiple operations on the same page
 Remove tab whitespace for repository browsing
@@ -104,7 +105,7 @@ Improve class and and id attribute structuring
 Update MathJax CDN address
 Plot2D and Plot3D
 
-=1.3.0 =
+= 1.3.0 =
 reCaptcha support
 Summation and product operations
 Inline PDF support

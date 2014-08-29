@@ -4,7 +4,7 @@
  * Plugin URI: http://wp.tetragy.com
  * Description: Instant Mathematical Computing for the Wordpress public
  * Version: 1.3.0
- * Author: Tetragy Limited
+ * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
  */
