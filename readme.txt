@@ -11,9 +11,7 @@ Caascade allows the Wordpress public to request output from the Maxima CAS.
 
 == Description ==
 
-Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Users can enter expressions which are evaluated by a Caascade server. The output from running the operation is captured and returned in a format chosen by the plugin admin. Notable features include PDF and reCaptcha support.
-
-The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with site content.
+Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Users can enter expressions which are evaluated by a Caascade server. The output from running the operation is captured and returned in a format chosen by the plugin admin. Notable features include PDF and reCaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with site content.
 
 The current version of the plugin provides for the following operations:
 
@@ -34,10 +32,9 @@ The current version of the plugin provides for the following operations:
 - plot2D
 - plot3D
 
-Using your registered Caascade account, you can adjust settings for:
+Using your Caascade account, you can adjust settings for:
 
 - Exact fractions
-- Display Medium
 - Output format
 - Floating point precision
 - Input base
@@ -47,7 +44,7 @@ Using your registered Caascade account, you can adjust settings for:
 
 == Installation ==
 
-A Caascade ID is necessary and may be obtained from https://math.tetragy.com by following the Account link.
+A Caascade ID is necessary and may be obtained from https://math.tetragy.com
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
 2. Visit the WP Caascade settings page of your Wordpress site to configure your ID.
