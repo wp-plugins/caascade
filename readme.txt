@@ -31,7 +31,7 @@ The current version of the plugin provides for the following operations:
 - relational operators
 - plot2D
 - plot3D
-- greatest common factor
+- greatest common factor (v1.3.2)
 
 Using your Caascade account, you can adjust settings for:
 
@@ -62,12 +62,17 @@ No, Maxima does not need to be installed on your server. Wordpress and the Caasc
 
 With reCaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
 
+3. Is Caascade free ?
+
+For light users- yes. Server-side, Caascade makes use of the Drupal Userpoints module to replenish the free monthly computation limit. Currently, +250 points are alotted with signup. Then, on the first of each of month, an additional +250 points are granted. Additional points may be purchased to match your website's computing needs.
+
 References
 
 - http://maxima.sourceforge.net
 - http://www.latex-project.org
 - http://www.mathjax.org
 - http://www.google.com/recaptcha
+- https://www.drupal.org/project/userpoints
 - https://math.tetragy.com
 
 == Screenshots ==
