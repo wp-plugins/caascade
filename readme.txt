@@ -48,9 +48,9 @@ Using your Caascade account, you can adjust settings for:
 A Caascade ID is necessary and may be obtained from https://math.tetragy.com
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
-2. Visit the WP Caascade settings page of your Wordpress site to configure your ID.
-3. Whitelist your server IP address or disable enforcing.
-4. Use Shortcode in your posts to include a Caascade operation. For example, `[caascade com="prime"]`.
+2. Whitelist your server IP addresses or disable enforcing for your account at the Caascade project website.
+3. Visit the Caascade settings page of your Wordpress site to configure your ID.
+4. Use Shortcode in your posts to include a Caascade operation. The following is sample Shortcode you can include in a post: `[caascade com="prime"]`.
 
 == Frequently Asked Questions ==
 
