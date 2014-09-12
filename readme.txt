@@ -85,6 +85,7 @@ References
 
 = 1.3.2 =
 * Greatest common factor
+* Switch from POST to GET
 
 = 1.3.1 =
 * Fix bug where reCaptcha keys with hypen may not be saved 

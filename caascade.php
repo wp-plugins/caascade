@@ -247,7 +247,7 @@ function prefix_ajax_caascade_compute() {
     $fields_string .= $key . '=' . $value . '&';
   }
   $fields_string = rtrim($fields_string, '&');
-  echo file_get_contents(get_option('caascade_router', 'https://route.tetragy.com') . '/index.php?' . $fields_string);
+  echo $_REQUEST['callback'] . '(' . file_get_contents(get_option('caascade_router', 'https://route.tetragy.com') . '/index.php?' . $fields_string) . ')';
   die();
 }
 

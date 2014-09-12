@@ -32,9 +32,9 @@ jQuery(document).ready( function($)
     $(cid + ' .caascade-waiting').animate({opacity:1,height:'toggle'})
     $(cid + ' .caascade-output').animate({opacity:0,height:'toggle'})
     jQuery.ajax({
-      type : 'post',
+      type : 'get',
       url : caascadeAjax.ajaxurl,
-      dataType : 'json',
+      dataType : 'jsonp',
       data: {
         action: "caascade_compute",
         arg0: $(cid + ' .caascade-arg0').val(),
