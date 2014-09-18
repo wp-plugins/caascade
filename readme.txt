@@ -3,7 +3,7 @@ Contributors: pmagunia
 Tags: math,education,shortcode
 Requires at least: 3.9.2
 Tested up to: 4.0
-Stable tag: 1.3.2
+Stable tag: 1.3.1
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Caascade allows users to request output from the Maxima CAS.
 
 Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and reCaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with site content.
 
-The current version of the plugin provides for the following operations:
+Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
 
 - defint
 - derivative
@@ -31,7 +31,7 @@ The current version of the plugin provides for the following operations:
 - relational operators
 - plot2D
 - plot3D
-- greatest common factor (v1.3.2)
+- greatest common divisor
 
 Using your Caascade account, you can adjust settings for:
 
@@ -56,17 +56,25 @@ A Caascade ID is necessary and may be obtained from tetragy.com
 
 1. How much does it cost ?
 
-$0.0025 per request.
+$0.00105 per request.
 
-2. Do I need Maxima installed on my server ?
+2. Can I try out the services ?
+
+Yes, 250 points are immediately awarded upon signup, and another 250 points are awarded the first of the month. This should be enough for light users to take advantage of a particular service without any purchase.
+
+3. How does the point system work ?
+
+Tetragy offers three distinct web services and uses a point system to create a digital currency between services. Points may be used for Caascade computation requests, statistical operations, or LaTeX document compiling.
+
+4. Do I need Maxima installed on my server ?
 
 No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade ID.
 
-3. How do I prevent spam submissions ?
+5. How do I prevent spam submissions ?
 
 With reCaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
 
-4. Why is it recommended to whitelist my IP address ?
+6. Why is it recommended to whitelist my IP address ?
 
 To prevent unauthorized use of your Tetragy account. If IP enforcing is disabled, Caascade requests made with your ID will be deducted from your account.
 
