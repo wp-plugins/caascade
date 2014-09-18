@@ -60,7 +60,7 @@ $0.00105 per request.
 
 2. Can I try out the services ?
 
-Yes, 250 points are immediately awarded upon signup, and another 250 points are awarded the first of the month. This should be enough for light users to take advantage of a particular service without any purchase.
+Yes, 250 points are immediately awarded upon signup, and another 250 points are awarded the first of the month. This should be enough for users to take advantage of a particular service without any purchase.
 
 3. How does the point system work ?
 
