@@ -42,6 +42,34 @@ Tetragy welcomes requests for new operations that may be specific to a user or o
 - factorial
 - double factorial
 - absolute value
+- arc cosine
+- hyperbolic arc cosine
+- arc cotangent
+- hyperbolic cotangent
+- arc secant
+- hyperbolic arc cosecant
+- arc secant
+- hyperbolic arc secant
+- arc sine
+- hyperbolic arc sine
+- arc cotangent
+- hyperbolic arc cotangent
+- cosine
+- hyperbolic cosine
+- cotangent
+- hyperbolic cotangent
+- cosecant
+- hyperbolic cosecant
+- exponential function
+- natural logarithm
+- random
+- secant
+- hyperbolic secant
+- sine
+- hyperbolic sine
+- square root
+- tangent
+- hyperbolic tangent
 
 Using your Caascade account, you can adjust settings for:
 
@@ -106,18 +134,46 @@ References
 == Changelog ==
 
 = 1.5.0 =
-* Inline approximate support
-* Double factorial
-* Factorial
-* Absolute Value
-* Distribute over
-* Summation
-* Product
-* Floor
-* Ceiling
-* Greatest common divisor
-* Switch from POST to GET and jsonp
-* Clarify README.txt
+* switch from POST to GET and jsonp
+* clarify README.txt
+* inline approximate support
+* double factorial
+* factorial
+* absolute Value
+* distribute over
+* summation
+* product
+* greatest common divisor
+* floor
+* ceiling
+* arc cosine
+* hyperbolic arc cosine
+* arc cotangent
+* hyperbolic cotangent
+* arc secant
+* hyperbolic arc cosecant
+* arc secant
+* hyperbolic arc secant
+* arc sine
+* hyperbolic arc sine
+* arc cotangent
+* hyperbolic arc cotangent
+* cosine
+* hyperbolic cosine
+* cotangent
+* hyperbolic cotangent
+* cosecant
+* hyperbolic cosecant
+* exponential function
+* natural logarithm
+* random
+* secant
+* hyperbolic secant
+* sine
+* hyperbolic sine
+* square root
+* tangent
+* hyperbolic tangent
 
 = 1.3.1 =
 * Fix bug where reCaptcha keys with hypen may not be saved 
