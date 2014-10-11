@@ -234,6 +234,7 @@ function prefix_ajax_caascade_compute() {
   $fields['id'] = $_REQUEST['id'];
   $fields['cmd'] = $_REQUEST['cmd'];
   $fields['pdf'] = urlencode($_REQUEST['pdf']);
+  $fields['approximate'] = urlencode($_REQUEST['approximate']);
   $fields['arg0'] = urlencode($_REQUEST['arg0']);
   $fields['arg1'] = urlencode($_REQUEST['arg1']);
   $fields['arg2'] = urlencode($_REQUEST['arg2']);
