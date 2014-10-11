@@ -70,6 +70,10 @@ Tetragy welcomes requests for new operations that may be specific to a user or o
 - square root
 - tangent
 - hyperbolic tangent
+- isint
+- isodd
+- iseven
+- asksign
 
 Using your Caascade account, you can adjust settings for:
 
@@ -174,6 +178,11 @@ References
 * square root
 * tangent
 * hyperbolic tangent
+* isint
+* isodd
+* iseven
+* asksign
+
 
 = 1.3.1 =
 * Fix bug where reCaptcha keys with hypen may not be saved 
