@@ -95,7 +95,16 @@ References
 
 == Changelog ==
 
-= 1.4.0 =
+= 1.5.0 =
+* Inline approximate support
+* Double factorial
+* Factorial
+* Absolute Value
+* Distribute over
+* Summation
+* Product
+* Floor
+* Ceiling
 * Greatest common divisor
 * Switch from POST to GET and jsonp
 * Clarify README.txt
@@ -135,10 +144,11 @@ References
 
 == Upgrade Notice ==
 
-= 1.4.0 =
-New operations
-Under-the-hood changes
+= 1.5.0 =
 No bug fixes
+New operations
+New feature: Inline approximate support
+Under-the-hood changes (POST to GET)
 
 = 1.3.1 =
 Necessary for certain reCaptcha users
