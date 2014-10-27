@@ -6,6 +6,8 @@ input[type="hidden"], .caascade-waiting { display:none; }
 
 .caascade-cp input[type="text"] { width:3.3em;margin:0 1em; }
 
+.caascade .caascade-cp input { vertical-align:middle; }
+
 .caascade-dialog { border:1px solid #ccc;margin:1.5em 0; border-radius:0.25em;text-align:left;overflow-x:auto; }
 
 .caascade-waiting-container { padding:1em 1em 0; }

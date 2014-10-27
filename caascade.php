@@ -223,7 +223,10 @@ function prefix_ajax_caascade_compute() {
   $privatekey = get_option('caascade_recaptcha_privatekey', '');
   if(strlen($privatekey))
   {
-    require_once('recaptchalib.php');
+    if(!class_exists('ReCaptchaResponse'))
+    {
+      require_once 'recaptchalib.php';
+    }
     $resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_REQUEST["recaptcha_challenge_field"], $_REQUEST["recaptcha_response_field"]);
     if(!$resp->is_valid)
     {
