@@ -139,6 +139,8 @@ References
 
 = 1.5.0 =
 * switch from POST to GET and jsonp
+* localize JavaScript pubkey variable
+* minor CSS changes
 * clarify README.txt
 * inline approximate support
 * double factorial
@@ -223,7 +225,7 @@ References
 No bug fixes
 New operations
 New feature: Inline approximate support
-Under-the-hood changes (POST to GET)
+Under-the-hood changes (POST to GET), localize global variables for Quatriceps release, minor CSS changes
 
 = 1.3.1 =
 Necessary for certain reCaptcha users

@@ -1,6 +1,6 @@
 jQuery(document).ready( function($)
 {
-  pubkey = caascadeAjax.recaptcha_pubkey
+  var pubkey = caascadeAjax.caascade_recaptcha_pubkey
   $('.caascade-submit').click(function()
   {
     cid = '#' + $(this).parent('div').parent('div').attr('id')
@@ -86,6 +86,7 @@ jQuery(document).ready( function($)
           data.output = '<pre>' + data.output + '</pre>'
         }
         $(cid + ' .caascade-output').html('<div class="caascade-out-input"><div class="caascade-prompt caascade-prompt-i">%i1</div>' + data.input + '</div><div class="caascade-out-output"><div class="caascade-prompt caascade-prompt-o">%o1</div>' + data.output + '</div><div class="caascade-out-pdf">' + data.pdf + '</div>')
+        // mathjax.org for MathML and TeX
         MathJax.Hub.Queue(["Typeset",MathJax.Hub])
         $(cid + ' .caascade-waiting').animate({opacity:0,height:'toggle'})
         $(cid + ' .caascade-output').animate({opacity:1,height:'toggle'})

@@ -117,7 +117,7 @@ function caascade_setting_recaptcha_theme()
 
 function caascade_setting_recaptcha_privatekey()
 {
-  $privatekey = get_option('caascade_recaptcha_privatekey');
+  $privatekey = get_option('caascade_recaptcha_privatekey', '');
   echo "<input id='caascade_recaptcha_privatekey' name='caascade_recaptcha_privatekey' size='40' type='text' value='$privatekey' />";
 }
 
@@ -203,10 +203,11 @@ add_action( 'init', 'caascade_script_enqueuer' );
 
 function caascade_script_enqueuer() {
   wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.5.0', false);
+  # mathjax.org for MathML and TeX
   wp_register_script("mathjax_script", "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.5.0', false);
   wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery', 'mathjax_script'), '1.5.0', true);
   wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.5.0', 'all');
-  wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
+  wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'caascade_recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
 
   wp_enqueue_script('recaptcha_script');
   wp_enqueue_script('mathjax_script');
@@ -219,10 +220,10 @@ add_action("wp_ajax_nopriv_caascade_compute", "prefix_ajax_caascade_compute");
 
 function prefix_ajax_caascade_compute() {
 
-  require_once('recaptchalib.php');
   $privatekey = get_option('caascade_recaptcha_privatekey', '');
   if(strlen($privatekey))
   {
+    require_once('recaptchalib.php');
     $resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_REQUEST["recaptcha_challenge_field"], $_REQUEST["recaptcha_response_field"]);
     if(!$resp->is_valid)
     {
