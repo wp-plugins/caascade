@@ -96,27 +96,27 @@ A Caascade ID is necessary and may be obtained from https://tetragy.com/.
 
 == Frequently Asked Questions ==
 
-1. How much does it cost ?
+= How much does it cost ? =
 
 $0.00105 per request.
 
-2. Can I try out the services ?
+= Can I try out the services ? =
 
 Yes, 250 points are granted with signup, and another 250 points are granted the first of every month. This should be enough for users to take advantage of a particular service without any purchase.
 
-3. How does the point system work ?
+= How does the point system work ? =
 
 Tetragy offers three distinct web services and uses a point system to create a digital currency between services. Points may be used for Caascade computation requests, statistical operations, or LaTeX document compiling.
 
-4. Do I need Maxima installed on my server ?
+= Do I need Maxima installed on my server ? =
 
 No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade ID.
 
-5. How do I prevent spam submissions ?
+= How do I prevent spam submissions ? =
 
 With reCaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
 
-6. Why is it recommended to whitelist my IP address ?
+= Why is it recommended to whitelist my IP address ? =
 
 To prevent unauthorized use of your Tetragy account. If IP enforcing is disabled, Caascade requests made with your ID will be deducted from your account.
 
