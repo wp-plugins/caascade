@@ -3,7 +3,7 @@ Contributors: pmagunia
 Tags: math,education,shortcode
 Requires at least: 3.9.2
 Tested up to: 4.0
-Stable tag: 1.3.1
+Stable tag: 1.5.0
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,37 +11,57 @@ Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
 
-Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations into Wordpress pages and posts. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and reCaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
-
-A demo of select operations can be found at http://wp.tetragy.com/.
+Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and reCaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
 
 Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
 
-- defint
-- derivative
-- expand
-- factor
-- integrate
-- limit
-- prime
-- evaluate
-- exponent
+Arithmetic
 - add
 - subtract
-- multiply
+- multipliy
 - divide
-- relational operators
-- plot2D
-- plot3D
-- greatest common divisor
-- summation
-- product
-- floor
-- ceiling
-- distribute over
+- exponent
 - factorial
 - double factorial
+- is greater than
+- is greater than or equal to
+- is less than
+- is less than or equal to
+
+Algebra
+- expand
+- factor
+- evaluate
+- distribute over
 - absolute value
+- factor out
+- polynomial divide
+- square root
+
+Number Theory
+- prime
+- greatest common divisor
+- isint
+- isodd
+- iseven
+- asksign
+
+Plotting
+- plot2d
+- plot3d
+- contour plot
+- implicit plot
+- parametric plot
+
+Calculus
+- defint
+- derivative
+- integrate
+- limit
+- summation
+- product
+
+Trigonometry
 - arc cosine
 - hyperbolic arc cosine
 - arc cotangent
@@ -62,28 +82,27 @@ Tetragy welcomes requests for new operations that may be specific to a user or o
 - hyperbolic cosecant
 - exponential function
 - natural logarithm
-- random
 - secant
 - hyperbolic secant
 - sine
 - hyperbolic sine
-- square root
 - tangent
 - hyperbolic tangent
-- isint
-- isodd
-- iseven
-- asksign
+
+Miscellaneous
+- floor
+- ceiling
+- random
 
 Using your Caascade account, you can adjust settings for:
 
-- Exact fractions
-- Output format
-- Floating point precision
-- Input base
-- Output base
-- Line length
-- Maxima flags
+- exact fractions (approximate)
+- output format
+- floating point precision
+- input base
+- output base
+- line length
+- certain Maxima flags
 
 == Installation ==
 
@@ -94,6 +113,8 @@ A Caascade ID is necessary and may be obtained from https://tetragy.com/.
 3. Visit the Caascade settings page of your Wordpress site to configure your ID.
 4. Use Shortcode in your posts to include a Caascade operation. For example: `[caascade com="prime"]`.
 
+A demonstration of select operations can be found at http://wp.tetragy.com/.
+
 == Frequently Asked Questions ==
 
 = How much does it cost ? =
@@ -102,7 +123,7 @@ $0.00105 per request.
 
 = Can I try out the services ? =
 
-Yes, 250 points are granted with signup, and another 250 points are granted the first of every month. This should be enough for users to take advantage of a particular service without any purchase.
+Yes, 250 points are awarded with signup, and another 250 points are awarded the first of every month.
 
 = How does the point system work ? =
 
@@ -184,6 +205,9 @@ References
 * isodd
 * iseven
 * asksign
+* contour plot
+* implicit plot
+* parametric plot
 
 
 = 1.3.1 =
@@ -225,7 +249,7 @@ References
 No bug fixes
 New operations
 New feature: Inline approximate support
-Under-the-hood changes (POST to GET), localize global variables for Quatriceps release, minor CSS changes
+Under-the-hood changes (POST to GET), localize global variables for Quatriceps release, minor CSS and verbiage changes
 
 = 1.3.1 =
 Necessary for certain reCaptcha users
