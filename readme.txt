@@ -162,6 +162,8 @@ References
 1. Test of primality operation on the integer '113'
 2. plot3D screenshot of log(x) on (-1,1)
 3. plot2D screenshot of log(x) on (-1,1)
+4. Caascade UI
+5. Caascade syntax for including operation on a page or post
 
 == Changelog ==
 
