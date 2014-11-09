@@ -16,6 +16,7 @@ Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plug
 Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
 
 Arithmetic
+
 - add
 - subtract
 - multipliy
@@ -29,6 +30,7 @@ Arithmetic
 - is less than or equal to
 
 Algebra
+
 - expand
 - factor
 - evaluate
@@ -39,6 +41,7 @@ Algebra
 - square root
 
 Number Theory
+
 - prime
 - greatest common divisor
 - isint
@@ -47,6 +50,7 @@ Number Theory
 - asksign
 
 Plotting
+
 - plot2d
 - plot3d
 - contour plot
@@ -54,6 +58,7 @@ Plotting
 - parametric plot
 
 Calculus
+
 - defint
 - derivative
 - integrate
@@ -62,6 +67,7 @@ Calculus
 - product
 
 Trigonometry
+
 - arc cosine
 - hyperbolic arc cosine
 - arc cotangent
@@ -90,6 +96,7 @@ Trigonometry
 - hyperbolic tangent
 
 Miscellaneous
+
 - floor
 - ceiling
 - random
@@ -246,29 +253,34 @@ References
 == Upgrade Notice ==
 
 = 1.5.0 =
-No bug fixes
-New operations
-New feature: Inline approximate support
-Under-the-hood changes (POST to GET), localize global variables for Quatriceps release, minor CSS and verbiage changes
+
+No bug fixes, New operations, New feature: Inline approximate, Under-the-hood changes
 
 = 1.3.1 =
+
 Necessary for certain reCaptcha users
 
 = 1.3.0 =
+
 Recommended for users who need recaptcha and inline PDF options
 
 = 1.2.0 =
+
 Recommended for users who want to display multiple blocks. New plotting operations.
 
 = 1.1.2 =
+
 Arithmetic operators
 
 = 1.1.1 =
+
 No functional changes. Minor improvement to documentation and JS enqueue
 
 = 1.1 =
+
 Recommended for all users. New features and stability improvements.
 
 = 1.0 =
+
 Initial commit
 
