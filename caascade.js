@@ -4,6 +4,11 @@ jQuery(document).ready( function($)
   $('.caascade-submit').click(function()
   {
     cid = '#' + $(this).parent('div').parent('div').attr('id')
+    if($(cid + ' .caascade-arg0').val() == '')
+    {
+     alert('Please enter all required input.')
+     return false;
+    }
     if(pubkey.length)
     {
       if($('#recaptcha_challenge_image').length == 0)
@@ -11,6 +16,7 @@ jQuery(document).ready( function($)
         recap_theme = caascadeAjax.recaptcha_theme
         var recap_div = $(cid + ' .caascade-recaptcha').attr('id')
         Recaptcha.create(pubkey, recap_div, { theme: recap_theme })
+        $(cid + ' .caascade-submit').val('Submit Recaptcha')
         return false;
       }
 
