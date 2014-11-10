@@ -87,7 +87,7 @@ function caascade_section_text()
 
 function caascade_recaptcha_text()
 {
-  echo '<p>Recaptcha is a Google service to help prevent spam submissions and abuse. Entering a public and private key will activite Recaptchas for all Wordpress Quatriceps widgets.<strong>If you decide to use the Recaptcha service, be sure to enter a correct public and private key otherwise, you may get confusing results.</strong> Be sure the keys you enter are for your particular domain that is registered at Google.</p>';
+  echo '<p>Recaptcha is a Google service to help prevent spam submissions and abuse. Entering a public and private key will activite Recaptchas for all Wordpress Quatriceps widgets. <strong>If you decide to use the Recaptcha service, be sure to enter the correct public and private key otherwise you may get confusing results.</strong> Also, be sure the keys you enter are for your particular domain that is registered at Google.</p>';
 }
 
 function caascade_setting_string()
