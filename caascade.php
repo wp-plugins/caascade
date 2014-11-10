@@ -72,12 +72,12 @@ function caascade_plugin_admin_init()
   register_setting( 'caascade_plugin_settings', 'caascade_recaptcha_privatekey', 'caascade_recaptcha_privatekey_validate');
   register_setting( 'caascade_plugin_settings', 'caascade_recaptcha_theme', 'caascade_recaptcha_theme_validate');
   add_settings_section('caascade_options', 'Caascade', 'caascade_section_text', 'caascade');
-  add_settings_section('caascade_recaptcha_options', 'reCaptcha', 'caascade_recaptcha_text', 'caascade');
+  add_settings_section('caascade_recaptcha_options', 'Recaptcha', 'caascade_recaptcha_text', 'caascade');
   add_settings_field('caascade_id', 'Caascade Numeric ID', 'caascade_setting_string', 'caascade', 'caascade_options');
   add_settings_field('caascade_router', 'Caascade Router', 'caascade_setting_router', 'caascade', 'caascade_options');
-  add_settings_field('caascade_recaptcha_publickey', 'reCaptcha Public Key', 'caascade_setting_recaptcha_publickey', 'caascade', 'caascade_recaptcha_options');
-  add_settings_field('caascade_recaptcha_privatekey', 'reCaptcha Private Key', 'caascade_setting_recaptcha_privatekey', 'caascade', 'caascade_recaptcha_options');
-  add_settings_field('caascade_recaptcha_theme', 'reCaptcha Theme', 'caascade_setting_recaptcha_theme', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_publickey', 'Recaptcha Public Key', 'caascade_setting_recaptcha_publickey', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_privatekey', 'Recaptcha Private Key', 'caascade_setting_recaptcha_privatekey', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_theme', 'Recaptcha Theme', 'caascade_setting_recaptcha_theme', 'caascade', 'caascade_recaptcha_options');
 }
 
 function caascade_section_text()
@@ -87,7 +87,7 @@ function caascade_section_text()
 
 function caascade_recaptcha_text()
 {
-  echo '<p>reCaptch is a Google service to help prevent spam submissions and abuse. Entering a public and private key will activite reCaptcha for all Wordpress Caascade widgets.</p>';
+  echo '<p>Recaptcha is a Google service to help prevent spam submissions and abuse. Entering a public and private key will activite Recaptchas for all Wordpress Quatriceps widgets.<strong>If you decide to use the Recaptcha service, be sure to enter a correct public and private key otherwise, you may get confusing results.</strong> Be sure the keys you enter are for your particular domain that is registered at Google.</p>';
 }
 
 function caascade_setting_string()
