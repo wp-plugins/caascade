@@ -189,7 +189,10 @@ function caascade_func( $atts ) {
   $recap = '';
   if(strlen($publickey))
   {
-    require_once 'recaptchalib.php';
+    if(!class_exists('ReCaptchaResponse'))
+    {
+      require_once 'recaptchalib.php';
+    }
     # support multiple Recaptcha
     $recap = '<div class="caascade-recaptcha" id="caascade-recaptcha-' . rand(10000,99999) . '"></div>';
   }
