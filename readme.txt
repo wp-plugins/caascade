@@ -11,7 +11,7 @@ Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
 
-Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and reCaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
+Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
 
 Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
 
@@ -142,7 +142,7 @@ No, Maxima does not need to be installed on your server. Wordpress and the Caasc
 
 = How do I prevent spam submissions ? =
 
-With reCaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a reCaptcha form to all your widgets. This plugin also includes support for reCaptcha themes.
+With Recaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a Recaptcha form to all your widgets. This plugin also includes support for Recaptcha themes.
 
 = Why is it recommended to whitelist my IP address ? =
 
@@ -220,10 +220,10 @@ References
 
 
 = 1.3.1 =
-* Fix bug where reCaptcha keys with hypen may not be saved 
+* Fix bug where Recaptcha keys with hypen may not be saved 
 
 = 1.3.0 =
-* reCaptcha support
+* Recaptcha support
 * Summation and product operations
 * Inline PDF support
 
@@ -260,7 +260,7 @@ No bug fixes, New operations, New feature: Inline approximate, Under-the-hood ch
 
 = 1.3.1 =
 
-Necessary for certain reCaptcha users
+Necessary for certain Recaptcha users
 
 = 1.3.0 =
 

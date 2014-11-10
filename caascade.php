@@ -190,7 +190,7 @@ function caascade_func( $atts ) {
   if(strlen($publickey))
   {
     require_once 'recaptchalib.php';
-    # support multiple reCaptcha
+    # support multiple Recaptcha
     $recap = '<div class="caascade-recaptcha" id="caascade-recaptcha-' . rand(10000,99999) . '"></div>';
   }
   $markup = '<div class="caascade-cp">' . $markup . '</div>';
@@ -230,7 +230,7 @@ function prefix_ajax_caascade_compute() {
     $resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_REQUEST["recaptcha_challenge_field"], $_REQUEST["recaptcha_response_field"]);
     if(!$resp->is_valid)
     {
-      echo $_REQUEST['callback'] . '({"input":"","output":"The reCAPTCHA wasn\'t entered correctly. Go back and try it again.","pdf":""})';
+      echo $_REQUEST['callback'] . '({"input":"","output":"The Recaptcha wasn\'t entered correctly. Go back and try it again.","pdf":""})';
       die();
     }
   }
