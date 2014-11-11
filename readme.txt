@@ -113,7 +113,7 @@ Using your Caascade account, you can adjust settings for:
 
 == Installation ==
 
-A Caascade ID is necessary and may be obtained from https://tetragy.com/.
+A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accounts are necessary to allocate resources and prevent abuse of user and network services. Links to the Tetragy Limited privacy policy and terms of service may be found at the bottom of all .tetragy.com pages.
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
 2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`.
