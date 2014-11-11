@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Caascade
  * Plugin URI: http://wp.tetragy.com
- * Description: Instant Mathematical Computing for the Wordpress public
- * Version: 1.3.1
+ * Description: Mathematical Computing for the Wordpress public
+ * Version: 1.5.0
  * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
@@ -72,12 +72,12 @@ function caascade_plugin_admin_init()
   register_setting( 'caascade_plugin_settings', 'caascade_recaptcha_privatekey', 'caascade_recaptcha_privatekey_validate');
   register_setting( 'caascade_plugin_settings', 'caascade_recaptcha_theme', 'caascade_recaptcha_theme_validate');
   add_settings_section('caascade_options', 'Caascade', 'caascade_section_text', 'caascade');
-  add_settings_section('caascade_recaptcha_options', 'reCaptcha', 'caascade_recaptcha_text', 'caascade');
+  add_settings_section('caascade_recaptcha_options', 'Recaptcha', 'caascade_recaptcha_text', 'caascade');
   add_settings_field('caascade_id', 'Caascade Numeric ID', 'caascade_setting_string', 'caascade', 'caascade_options');
   add_settings_field('caascade_router', 'Caascade Router', 'caascade_setting_router', 'caascade', 'caascade_options');
-  add_settings_field('caascade_recaptcha_publickey', 'reCaptcha Public Key', 'caascade_setting_recaptcha_publickey', 'caascade', 'caascade_recaptcha_options');
-  add_settings_field('caascade_recaptcha_privatekey', 'reCaptcha Private Key', 'caascade_setting_recaptcha_privatekey', 'caascade', 'caascade_recaptcha_options');
-  add_settings_field('caascade_recaptcha_theme', 'reCaptcha Theme', 'caascade_setting_recaptcha_theme', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_publickey', 'Recaptcha Public Key', 'caascade_setting_recaptcha_publickey', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_privatekey', 'Recaptcha Private Key', 'caascade_setting_recaptcha_privatekey', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_theme', 'Recaptcha Theme', 'caascade_setting_recaptcha_theme', 'caascade', 'caascade_recaptcha_options');
 }
 
 function caascade_section_text()
@@ -87,7 +87,7 @@ function caascade_section_text()
 
 function caascade_recaptcha_text()
 {
-  echo '<p>reCaptch is a Google service to help prevent spam submissions and abuse. Entering a public and private key will activite reCaptcha for all Wordpress Caascade widgets.</p>';
+  echo '<p>Recaptcha is a Google service to help prevent spam submissions and abuse. Entering a public and private key will activite Recaptchas for all Caascade widgets. <strong>If you decide to use the Recaptcha service, be sure to enter the correct public and private key otherwise you may get confusing results.</strong> Also, be sure the keys you enter are for your particular domain that is registered at Google.</p>';
 }
 
 function caascade_setting_string()
@@ -117,7 +117,7 @@ function caascade_setting_recaptcha_theme()
 
 function caascade_setting_recaptcha_privatekey()
 {
-  $privatekey = get_option('caascade_recaptcha_privatekey');
+  $privatekey = get_option('caascade_recaptcha_privatekey', '');
   echo "<input id='caascade_recaptcha_privatekey' name='caascade_recaptcha_privatekey' size='40' type='text' value='$privatekey' />";
 }
 
@@ -189,8 +189,11 @@ function caascade_func( $atts ) {
   $recap = '';
   if(strlen($publickey))
   {
-    require_once 'recaptchalib.php';
-    # support multiple reCaptcha
+    if(!class_exists('ReCaptchaResponse'))
+    {
+      require_once 'recaptchalib.php';
+    }
+    # support multiple Recaptcha
     $recap = '<div class="caascade-recaptcha" id="caascade-recaptcha-' . rand(10000,99999) . '"></div>';
   }
   $markup = '<div class="caascade-cp">' . $markup . '</div>';
@@ -202,11 +205,12 @@ add_shortcode( 'caascade', 'caascade_func' );
 add_action( 'init', 'caascade_script_enqueuer' );
 
 function caascade_script_enqueuer() {
-  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.3.1', false);
-  wp_register_script("mathjax_script", "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.3.1', false);
-  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery', 'mathjax_script'), '1.3.1', true);
-  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.3.1', 'all');
-  wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
+  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.5.0', false);
+  # mathjax.org for MathML and TeX
+  wp_register_script("mathjax_script", "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.5.0', false);
+  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery', 'mathjax_script'), '1.5.0', true);
+  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.5.0', 'all');
+  wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'caascade_recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
 
   wp_enqueue_script('recaptcha_script');
   wp_enqueue_script('mathjax_script');
@@ -219,35 +223,63 @@ add_action("wp_ajax_nopriv_caascade_compute", "prefix_ajax_caascade_compute");
 
 function prefix_ajax_caascade_compute() {
 
-  require_once('recaptchalib.php');
   $privatekey = get_option('caascade_recaptcha_privatekey', '');
   if(strlen($privatekey))
   {
+    if(!class_exists('ReCaptchaResponse'))
+    {
+      require_once 'recaptchalib.php';
+    }
     $resp = recaptcha_check_answer($privatekey, $_SERVER["REMOTE_ADDR"], $_REQUEST["recaptcha_challenge_field"], $_REQUEST["recaptcha_response_field"]);
     if(!$resp->is_valid)
     {
-      echo '{"input":"","output":"The reCAPTCHA wasn\'t entered correctly. Go back and try it again.","pdf":""}';
+      echo $_REQUEST['callback'] . '({"input":"","output":"The Recaptcha wasn\'t entered correctly. Go back and try it again.","pdf":""})';
       die();
     }
   }
 
   $fields['id'] = $_REQUEST['id'];
   $fields['cmd'] = $_REQUEST['cmd'];
-  $fields['pdf'] = urlencode($_REQUEST['pdf']);
-  $fields['arg0'] = urlencode($_REQUEST['arg0']);
-  $fields['arg1'] = urlencode($_REQUEST['arg1']);
-  $fields['arg2'] = urlencode($_REQUEST['arg2']);
-  $fields['arg3'] = urlencode($_REQUEST['arg3']);
-  $fields['arg4'] = urlencode($_REQUEST['arg4']);
-  $fields['arg5'] = urlencode($_REQUEST['arg5']);
-  $fields['arg6'] = urlencode($_REQUEST['arg6']);
+  $fields['pdf'] = $_REQUEST['pdf'];
+  $fields['approximate'] = $_REQUEST['approximate'];
+  $fields['arg0'] = $_REQUEST['arg0'];
+  $fields['arg1'] = $_REQUEST['arg1'];
+  $fields['arg2'] = $_REQUEST['arg2'];
+  $fields['arg3'] = $_REQUEST['arg3'];
+  $fields['expr_1'] = $_REQUEST['expr_1'];
+  $fields['expr_2'] = $_REQUEST['expr_2'];
+  $fields['x_wrt'] = $_REQUEST['x_wrt'];
+  $fields['y_wrt'] = $_REQUEST['y_wrt'];
+  $fields['z_wrt'] = $_REQUEST['z_wrt'];
+  $fields['x_from'] = $_REQUEST['x_from'];
+  $fields['y_from'] = $_REQUEST['y_from'];
+  $fields['z_from'] = $_REQUEST['z_from'];
+  $fields['x_to'] = $_REQUEST['x_to'];
+  $fields['y_to'] = $_REQUEST['y_to'];
+  $fields['z_to'] = $_REQUEST['z_to'];
+  $fields['azimuth'] = $_REQUEST['azimith'];
+  $fields['elevation'] = $_REQUEST['elevation'];
+  $fields['ntics'] = $_REQUEST['ntics'];
+  $fields['grid'] = $_REQUEST['grid'];
+  $fields['logx'] = $_REQUEST['logx'];
+  $fields['logy'] = $_REQUEST['logy'];
+  $fields['contours'] = $_REQUEST['contours'];
+  $fields['box'] = $_REQUEST['box'];
+  $fields['axes'] = $_REQUEST['axes'];
+  $fields['legend'] = $_REQUEST['legend'];
+  $fields['xlabel'] = $_REQUEST['xlabel'];
+  $fields['ylabel'] = $_REQUEST['ylabel'];
+  $fields['zlabel'] = $_REQUEST['zlabel'];
+  $fields['width'] = $_REQUEST['width'];
+  $fields['height'] = $_REQUEST['height'];
+  $fields['format'] = $_REQUEST['format'];
   $fields_string = '';
   foreach($fields as $key => $value)
   {
-    $fields_string .= $key . '=' . $value . '&';
+    $fields_string .= $key . '=' . urlencode($value) . '&';
   }
   $fields_string = rtrim($fields_string, '&');
-  echo file_get_contents(get_option('caascade_router', 'https://route.tetragy.com') . '/index.php?' . $fields_string);
+  echo $_REQUEST['callback'] . '(' . file_get_contents(get_option('caascade_router', 'https://route.tetragy.com') . '/index.php?' . $fields_string) . ')';
   die();
 }
 
