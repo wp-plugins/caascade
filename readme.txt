@@ -3,7 +3,7 @@ Contributors: pmagunia
 Tags: math,education,shortcode
 Requires at least: 3.9.2
 Tested up to: 4.0
-Stable tag: 1.5.0
+Stable tag: trunk
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -164,14 +164,17 @@ References
 3. plot2D screenshot of log(x) on (-1,1)
 4. Caascade UI
 5. Caascade syntax for including operation on a page or post
+6. PDF of Caascade output
 
 == Changelog ==
 
 = 1.5.0 =
 * switch from POST to GET and jsonp
 * localize JavaScript pubkey variable
+* correct Recaptcha message on misconfiguration
+* Check Recaptcha classes existing before including
 * minor CSS changes
-* clarify README.txt
+* clarify README.txt and UI
 * inline approximate support
 * double factorial
 * factorial
@@ -217,7 +220,7 @@ References
 * contour plot
 * implicit plot
 * parametric plot
-
+* factorout
 
 = 1.3.1 =
 * Fix bug where Recaptcha keys with hypen may not be saved 
@@ -256,7 +259,12 @@ References
 
 = 1.5.0 =
 
-No bug fixes, New operations, New feature: Inline approximate, Under-the-hood changes
+Plotting API changes
+Bug fix: Correct Recaptcha message on misconfiguration
+Bug fix: Check Recaptcha class exists before declaring
+New operations: see Changelog
+New feature: Inline approximate, Under-the-hood changes
+Improve verbiage
 
 = 1.3.1 =
 
