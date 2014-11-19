@@ -47,6 +47,7 @@ jQuery(document).ready( function($)
         arg1: $(cid + ' .caascade-arg1').val(),
         arg2: $(cid + ' .caascade-arg2').val(),
         arg3: $(cid + ' .caascade-arg3').val(),
+        arg4: $(cid + ' .caascade-arg4').val(),
 				expr_1: $(cid + ' .caascade-expr_1').val(),
         expr_2: $(cid + ' .caascade-expr_2').val(),
         x_wrt: $(cid + ' .caascade-x_wrt').val(),

@@ -246,6 +246,7 @@ function prefix_ajax_caascade_compute() {
   $fields['arg1'] = $_REQUEST['arg1'];
   $fields['arg2'] = $_REQUEST['arg2'];
   $fields['arg3'] = $_REQUEST['arg3'];
+  $fields['arg4'] = $_REQUEST['arg4'];
   $fields['expr_1'] = $_REQUEST['expr_1'];
   $fields['expr_2'] = $_REQUEST['expr_2'];
   $fields['x_wrt'] = $_REQUEST['x_wrt'];
