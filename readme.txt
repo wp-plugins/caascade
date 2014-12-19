@@ -11,7 +11,7 @@ Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
 
-New: The MathJax-LaTeX plugin is now required for TeX rendering.
+New: The MathJax-LaTeX plugin with 'Force Load' option checkmarked is now required for TeX rendering. Otherwise, choose the 'Linear' or '2D' output format from your Caascade account to view Maxima output.
 
 Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
 
