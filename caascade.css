@@ -36,3 +36,4 @@ input[type="hidden"], .caascade-waiting { display:none; }
 
 .caascade .required { border:1px solid pink;color:inherit; }
 
+.caascade-2d { font-family:monospace; text-align:left; white-space:pre; }

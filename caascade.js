@@ -47,6 +47,7 @@ jQuery(document).ready( function($)
         arg1: $(cid + ' .caascade-arg1').val(),
         arg2: $(cid + ' .caascade-arg2').val(),
         arg3: $(cid + ' .caascade-arg3').val(),
+        arg4: $(cid + ' .caascade-arg4').val(),
 				expr_1: $(cid + ' .caascade-expr_1').val(),
         expr_2: $(cid + ' .caascade-expr_2').val(),
         x_wrt: $(cid + ' .caascade-x_wrt').val(),
@@ -93,7 +94,7 @@ jQuery(document).ready( function($)
         }
         $(cid + ' .caascade-output').html('<div class="caascade-out-input"><div class="caascade-prompt caascade-prompt-i">%i1</div>' + data.input + '</div><div class="caascade-out-output"><div class="caascade-prompt caascade-prompt-o">%o1</div>' + data.output + '</div><div class="caascade-out-pdf">' + data.pdf + '</div>')
         // mathjax.org for MathML and TeX
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub, cid.substring(1,cid.length)]);
         $(cid + ' .caascade-waiting').animate({opacity:0,height:'toggle'})
         $(cid + ' .caascade-output').animate({opacity:1,height:'toggle'})
         if(pubkey.length)

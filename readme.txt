@@ -2,7 +2,7 @@
 Contributors: pmagunia
 Tags: math,education,shortcode
 Requires at least: 3.9.2
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -10,6 +10,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
+
+New: The MathJax-LaTeX plugin is now required for TeX rendering.
 
 Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
 
@@ -24,6 +26,7 @@ Arithmetic
 - exponent
 - factorial
 - double factorial
+- beta & gamma functions
 - is greater than
 - is greater than or equal to
 - is less than
@@ -39,6 +42,8 @@ Algebra
 - factor out
 - polynomial divide
 - square root
+- solve
+- allroots
 
 Number Theory
 
@@ -65,6 +70,7 @@ Calculus
 - limit
 - summation
 - product
+- La Place transform
 
 Trigonometry
 
@@ -103,13 +109,12 @@ Miscellaneous
 
 Using your Caascade account, you can adjust settings for:
 
-- exact fractions (approximate)
+- exact fractions
 - output format
-- floating point precision
+- display medium
 - input base
 - output base
-- line length
-- certain Maxima flags
+- negsumflag
 
 == Installation ==
 
@@ -167,6 +172,12 @@ References
 6. PDF of Caascade output
 
 == Changelog ==
+
+= 1.6.0 =
+* MathJax-LaTeX plugin now required
+* Add caascade-2d CSS class
+* Added equal sign to isequal operation for clarity
+* New operations: allroots, beta, gamma, laplace, solve
 
 = 1.5.0 =
 * switch from POST to GET and jsonp
@@ -256,6 +267,12 @@ References
 
 
 == Upgrade Notice ==
+
+= 1.6.0 =
+
+New operations
+MathJax-LaTeX plugin support (required)
+Minor CSS & text edits
 
 = 1.5.0 =
 

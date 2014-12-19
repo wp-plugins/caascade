@@ -3,7 +3,7 @@
  * Plugin Name: Caascade
  * Plugin URI: http://wp.tetragy.com
  * Description: Mathematical Computing for the Wordpress public
- * Version: 1.5.0
+ * Version: 1.6.0
  * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
@@ -43,10 +43,15 @@ function caascade_plugin_settings_link($links)
 }
 
 function caascade_plugin_settings_page()
-{ ?>
+{ 
+  ?>
   <div class="wrap">
     <div class="wp-caascade-admin">
       <h2>Caascade Settings</h2>
+      <?php 
+        include_once(ABSPATH . 'wp-admin/includes/plugin.php');            
+        echo (!is_plugin_active('mathjax-latex/mathjax-latex.php') ? '<h3 style="color:red;">Required Wordpress MathJax-LaTeX plugin not found!</h3>' : '');
+      ?>
       <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode.</p><p>A Caascade account is necessary and may be obtained from <a href="https://math.tetragy.com">Tetragy</a>.</p>
       <div>
         <form action="options.php" method="post">
@@ -205,15 +210,13 @@ add_shortcode( 'caascade', 'caascade_func' );
 add_action( 'init', 'caascade_script_enqueuer' );
 
 function caascade_script_enqueuer() {
-  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.5.0', false);
+  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.6.0', false);
   # mathjax.org for MathML and TeX
-  wp_register_script("mathjax_script", "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML", array(), '1.5.0', false);
-  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery', 'mathjax_script'), '1.5.0', true);
-  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.5.0', 'all');
+  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery'), '1.6.0', true);
+  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.6.0', 'all');
   wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'caascade_recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
 
   wp_enqueue_script('recaptcha_script');
-  wp_enqueue_script('mathjax_script');
   wp_enqueue_script('caascade_script');
   wp_enqueue_style('caascade_css');
 }
@@ -246,6 +249,7 @@ function prefix_ajax_caascade_compute() {
   $fields['arg1'] = $_REQUEST['arg1'];
   $fields['arg2'] = $_REQUEST['arg2'];
   $fields['arg3'] = $_REQUEST['arg3'];
+  $fields['arg4'] = $_REQUEST['arg4'];
   $fields['expr_1'] = $_REQUEST['expr_1'];
   $fields['expr_2'] = $_REQUEST['expr_2'];
   $fields['x_wrt'] = $_REQUEST['x_wrt'];
