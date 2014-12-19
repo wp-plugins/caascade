@@ -94,7 +94,7 @@ jQuery(document).ready( function($)
         }
         $(cid + ' .caascade-output').html('<div class="caascade-out-input"><div class="caascade-prompt caascade-prompt-i">%i1</div>' + data.input + '</div><div class="caascade-out-output"><div class="caascade-prompt caascade-prompt-o">%o1</div>' + data.output + '</div><div class="caascade-out-pdf">' + data.pdf + '</div>')
         // mathjax.org for MathML and TeX
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub, cid.substring(1,cid.length)]);
         $(cid + ' .caascade-waiting').animate({opacity:0,height:'toggle'})
         $(cid + ' .caascade-output').animate({opacity:1,height:'toggle'})
         if(pubkey.length)
