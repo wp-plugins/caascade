@@ -122,7 +122,7 @@ A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accoun
 2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`.
 3. Visit the Caascade settings page of your Wordpress site to configure your ID.
 4. Use Shortcode in your posts to include a Caascade operation. For example: `[caascade com="prime"]`.
-5. (Optional) MathJax-LaTeX plugin with 'Force Load' option is now required for TeX rendering. Choose the 'Linear' or '2D' output format from your Caascade account to view Maxima output without this module.
+5. Download and enable the WordPress MathJax-LaTeX plugin with 'Force Load' option.
 
 A demonstration of select operations can be found at http://wp.tetragy.com/.
 
