@@ -11,8 +11,6 @@ Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
 
-New: The MathJax-LaTeX plugin with 'Force Load' option checkmarked is now required for TeX rendering. Otherwise, choose the 'Linear' or '2D' output format from your Caascade account to view Maxima output.
-
 Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
 
 Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
@@ -124,6 +122,7 @@ A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accoun
 2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`.
 3. Visit the Caascade settings page of your Wordpress site to configure your ID.
 4. Use Shortcode in your posts to include a Caascade operation. For example: `[caascade com="prime"]`.
+5. (Optional) MathJax-LaTeX plugin with 'Force Load' option is now required for TeX rendering. Choose the 'Linear' or '2D' output format from your Caascade account to view Maxima output without this module.
 
 A demonstration of select operations can be found at http://wp.tetragy.com/.
 
