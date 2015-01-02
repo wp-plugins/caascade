@@ -3,7 +3,7 @@
  * Plugin Name: Caascade
  * Plugin URI: http://wp.tetragy.com
  * Description: Mathematical Computing for the Wordpress public
- * Version: 1.6.0
+ * Version: 1.7.0
  * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
@@ -210,10 +210,21 @@ add_shortcode( 'caascade', 'caascade_func' );
 add_action( 'init', 'caascade_script_enqueuer' );
 
 function caascade_script_enqueuer() {
-  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.6.0', false);
-  # mathjax.org for MathML and TeX
-  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade/caascade.js', array('jquery'), '1.6.0', true);
-  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade/caascade.css', array(), '1.6.0', 'all');
+  # check if admin wants to override default CSS and JS files
+  $override_css = $override_js = '/html/override';
+  $override_css_path = plugin_dir_path( __FILE__ ) . '/html/override/caascade.css';
+  $override_js_path = plugin_dir_path( __FILE__ ) . '/html/override/caascade.js';
+  if(!is_file($override_css_path))
+  {
+    $override_css = '';
+  }
+  if(!is_file($override_js_path))
+  {
+     $override_js = '';
+  }
+  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.7.0', false);
+  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade' . $override_js . '/caascade.js', array('jquery'), '1.7.0', true);
+  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade' . $override_css . '/caascade.css', array(), '1.7.0', 'all');
   wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'caascade_recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
 
   wp_enqueue_script('recaptcha_script');
