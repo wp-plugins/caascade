@@ -3,7 +3,7 @@
  * Plugin Name: Caascade
  * Plugin URI: http://wp.tetragy.com
  * Description: Mathematical Computing for the Wordpress public
- * Version: 1.7.0
+ * Version: 1.8.0
  * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
@@ -222,9 +222,9 @@ function caascade_script_enqueuer() {
   {
      $override_js = '';
   }
-  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.7.0', false);
-  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade' . $override_js . '/caascade.js', array('jquery'), '1.7.0', true);
-  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade' . $override_css . '/caascade.css', array(), '1.7.0', 'all');
+  wp_register_script("recaptcha_script", "http://www.google.com/recaptcha/api/js/recaptcha_ajax.js", array(), '1.8.0', false);
+  wp_register_script("caascade_script", WP_PLUGIN_URL . '/caascade' . $override_js . '/caascade.js', array('jquery'), '1.8.0', true);
+  wp_register_style("caascade_css", WP_PLUGIN_URL . '/caascade' . $override_css . '/caascade.css', array(), '1.8.0', 'all');
   wp_localize_script('caascade_script', 'caascadeAjax', array('ajaxurl' => admin_url('admin-ajax.php'), 'caascade_recaptcha_pubkey' => get_option('caascade_recaptcha_publickey', ''), 'recaptcha_theme' => get_option('caascade_recaptcha_theme', 'red'), 'caascade_id' => get_option('caascade_id', '')));        
 
   wp_enqueue_script('recaptcha_script');
