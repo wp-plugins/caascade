@@ -172,6 +172,9 @@ References
 
 == Changelog ==
 
+= 1.8.0 =
+New operation: lcm1
+
 = 1.7.0 =
 * New feature: Override default CSS and JS files
 
@@ -269,6 +272,9 @@ References
 
 
 == Upgrade Notice ==
+
+= 1.8.0 =
+New operations
 
 = 1.7.0 =
 Upgrade for admins who would like to override default CSS and JS files with their own files. Place new files in `html/override` directory to automatically replace packaged files.
