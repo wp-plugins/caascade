@@ -118,11 +118,10 @@ Using your Caascade account, you can adjust settings for:
 
 A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accounts are necessary to allocate resources and prevent abuse of user and network services.
 
-1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
+1. Download and enable the Caascade and MathJax-LaTeX plugins which are downloaded to the `/wp-content/plugins/` directory. Use the 'Force Load' option for MathJax-LaTeX.
 2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`.
 3. Visit the Caascade settings page of your Wordpress site to configure your ID.
 4. Use Shortcode in your posts to include a Caascade operation. For example: `[caascade com="prime"]`.
-5. Download and enable the WordPress MathJax-LaTeX plugin with 'Force Load' option.
 
 A demonstration of select operations can be found at http://wp.tetragy.com/.
 
