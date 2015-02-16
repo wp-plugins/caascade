@@ -116,7 +116,7 @@ Using your Caascade account, you can adjust settings for:
 
 == Installation ==
 
-A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accounts are necessary to allocate resources and prevent abuse of user and network services. Links to the Tetragy Limited privacy policy and terms of service may be found at the bottom of all .tetragy.com pages.
+A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accounts are necessary to allocate resources and prevent abuse of user and network services.
 
 1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
 2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`.
@@ -128,25 +128,17 @@ A demonstration of select operations can be found at http://wp.tetragy.com/.
 
 == Frequently Asked Questions ==
 
-= How much does it cost ? =
+= Can I try out the service ? =
 
-$0.00105 per request.
-
-= Can I try out the services ? =
-
-Yes, 250 points are awarded with signup, and another 250 points are awarded the first of every month.
-
-= How does the point system work ? =
-
-Tetragy offers three distinct web services and uses a point system to create a digital currency between services. Points may be used for Caascade computation requests, statistical operations, or LaTeX document compiling.
+Yes, users are alloted free requests every month and can purchase additional requests if necessary.
 
 = Do I need Maxima installed on my server ? =
 
-No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade ID.
+No, Wordpress and the Caascade plugin are the only software requirements. The MathJax-LaTeX plugin is necessary for TeX rendering.
 
 = How do I prevent spam submissions ? =
 
-With Recaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a Recaptcha form to all your widgets. This plugin also includes support for Recaptcha themes.
+With Recaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a Recaptcha form to all your widgets.
 
 = Why is it recommended to whitelist my IP address ? =
 
