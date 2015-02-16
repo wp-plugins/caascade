@@ -98,7 +98,7 @@ function caascade_recaptcha_text()
 
 function caascade_helper_text()
 {
-  echo '<p>Once configured, use WordPress Shortcode syntax to add Caascade widgets: <strong>[caascade com="add"]</strong>.<p>Visit Tetragy\'s <a href="https://math.tetragy.com/caascade/doc">Caascade documentation</a> for a complete list Maxima commands available. Users may also request <a href="https://tetragy.com/node/66">custom commands</a> unique to their organization.</p>';
+  echo '<p>Once configured, use WordPress Shortcode syntax when editing a post to add Caascade widgets: <strong>[caascade com="add"]</strong>.<p>Visit Tetragy\'s <a href="https://math.tetragy.com/caascade/doc">Caascade documentation</a> for a complete list of Maxima commands available. Users may also request <a href="https://tetragy.com/node/66">custom commands</a> unique to their organization.</p>';
 }
 
 function caascade_setting_string()
