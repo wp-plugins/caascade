@@ -11,7 +11,7 @@ Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
 
-Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with mathematical site content.
+Caascade is a Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with their site's mathematical content.
 
 Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
 
@@ -116,41 +116,32 @@ Using your Caascade account, you can adjust settings for:
 
 == Installation ==
 
-A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accounts are necessary to allocate resources and prevent abuse of user and network services. Links to the Tetragy Limited privacy policy and terms of service may be found at the bottom of all .tetragy.com pages.
+A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accounts are necessary to allocate resources and prevent abuse of user and network services.
 
-1. Download and expand the Wordpress Caascade zip file to your `/wp-content/plugins/` directory.
-2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`.
-3. Visit the Caascade settings page of your Wordpress site to configure your ID.
+1. Download and enable the Caascade and MathJax-LaTeX plugins which are extracted to the `/wp-content/plugins/` directory. Use the 'Force Load' option for MathJax-LaTeX.
+2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`. Requests from unlisted IPs with IP enforcing enabled *will be rejected*.
+3. Visit the Caascade settings page of your Wordpress site to configure your ID. This can be found under Plugins.
 4. Use Shortcode in your posts to include a Caascade operation. For example: `[caascade com="prime"]`.
-5. Download and enable the WordPress MathJax-LaTeX plugin with 'Force Load' option.
 
 A demonstration of select operations can be found at http://wp.tetragy.com/.
 
 == Frequently Asked Questions ==
 
-= How much does it cost ? =
+= Can I try out the service ? =
 
-$0.00105 per request.
-
-= Can I try out the services ? =
-
-Yes, 250 points are awarded with signup, and another 250 points are awarded the first of every month.
-
-= How does the point system work ? =
-
-Tetragy offers three distinct web services and uses a point system to create a digital currency between services. Points may be used for Caascade computation requests, statistical operations, or LaTeX document compiling.
+Yes, users are alloted 2000 free sample requests and can purchase additional, if necessary.
 
 = Do I need Maxima installed on my server ? =
 
-No, Maxima does not need to be installed on your server. Wordpress and the Caascade plugin are the only software requirements. Configuring your Caascade account with a dedicated IP address is recommended to prevent unauthorized use of your Caascade ID.
+No, Wordpress and the Caascade plugin are the only software requirements. The MathJax-LaTeX plugin is necessary for TeX rendering.
 
 = How do I prevent spam submissions ? =
 
-With Recaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a Recaptcha form to all your widgets. This plugin also includes support for Recaptcha themes.
+With Recaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a Recaptcha form to all your widgets.
 
 = Why is it recommended to whitelist my IP address ? =
 
-To prevent unauthorized use of your Tetragy account. If IP enforcing is disabled, Caascade requests made with your ID will be deducted from your account.
+To prevent unauthorized use of your Tetragy account. If IP enforcing is disabled, any Caascade request made with your ID will be deducted from your account.
 
 References
 
@@ -171,6 +162,9 @@ References
 6. PDF of Caascade output
 
 == Changelog ==
+
+= 1.8.0 =
+New operation: lcm1
 
 = 1.7.0 =
 * New feature: Override default CSS and JS files
@@ -269,6 +263,9 @@ References
 
 
 == Upgrade Notice ==
+
+= 1.8.0 =
+New operations
 
 = 1.7.0 =
 Upgrade for admins who would like to override default CSS and JS files with their own files. Place new files in `html/override` directory to automatically replace packaged files.
