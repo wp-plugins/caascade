@@ -149,7 +149,7 @@ References
 - http://www.latex-project.org
 - http://www.mathjax.org
 - http://www.google.com/recaptcha
-- https://www.drupal.org/project/userpoints
+- https://wordpress.org/plugins/mathjax-latex/
 - https://math.tetragy.com
 
 == Screenshots ==
