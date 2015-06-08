@@ -164,7 +164,8 @@ References
 == Changelog ==
 
 = 1.8.0 =
-New operation: lcm1
+* New operation: lcm1
+* Drop MathJax-LaTeX support in favor of Simple-Mathjax
 
 = 1.7.0 =
 * New feature: Override default CSS and JS files

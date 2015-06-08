@@ -49,8 +49,8 @@ function caascade_plugin_settings_page()
     <div class="wp-caascade-admin">
       <h2>Caascade Settings</h2>
       <?php 
-        include_once(ABSPATH . 'wp-admin/includes/plugin.php');            
-        echo (!is_plugin_active('mathjax-latex/mathjax-latex.php') ? '<h3 style="color:red;">Required Wordpress MathJax-LaTeX plugin not found.</h3><h3 style="color:red;">Checkmark \'Force Load\' option once enabled.</h3>' : '');
+        include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        echo (!is_plugin_active('simple-mathjax/simple-mathjax.php') ? '<h3 style="color:red;">Required Wordpress Simple-MathJax plugin not found.</h3>' : '');
       ?>
       <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode.</p><p>A Caascade account is necessary and may be obtained from <a href="https://tetragy.com/user/register">Tetragy</a>.</p>
       <div>
