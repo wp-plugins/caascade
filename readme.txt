@@ -129,7 +129,7 @@ A demonstration of select operations can be found at http://wp.tetragy.com/.
 
 = How much does it cost ? =
 
-All computation requests with optional PDF output are free but will be branded so that users become aware of the service.
+All computation requests with optional PDF output are free but will be branded.
 
 = Do I need Maxima installed on my server ? =
 
