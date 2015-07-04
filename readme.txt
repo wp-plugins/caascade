@@ -11,7 +11,7 @@ Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
 
-Caascade is a free Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The output from running an operation is captured and returned in a format chosen by the site admin. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with their site's mathematical content.
+Caascade is a free Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with their site's mathematical content.
 
 Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
 
@@ -105,23 +105,10 @@ Miscellaneous
 - ceiling
 - random
 
-Using your Caascade account, you can adjust settings for:
-
-- exact fractions
-- output format
-- display medium
-- input base
-- output base
-- negsumflag
-
 == Installation ==
 
-A Caascade ID is necessary and may be obtained from https://tetragy.com/. Accounts are necessary to allocate resources and prevent abuse of user and network services.
-
 1. Download and enable the Caascade and Simple-MathJax plugins which are extracted to the `/wp-content/plugins/` directory.
-2. Whitelist your server IP addresses or disable enforcing at `math.tetragy.com/user`. Requests from unlisted IPs with IP enforcing enabled *will be rejected*.
-3. Visit the Caascade settings page of your Wordpress site to configure your ID. This can be found under Plugins.
-4. Use Shortcode in your posts to include a Caascade operation. For example: `[caascade com="prime"]`.
+2. Use Shortcode in your posts to include a Caascade operation. For example: `[caascade com="prime"]`.
 
 A demonstration of select operations can be found at http://wp.tetragy.com/.
 
@@ -129,19 +116,11 @@ A demonstration of select operations can be found at http://wp.tetragy.com/.
 
 = How much does it cost ? =
 
-All computation requests with optional PDF output are free but will be branded.
+All computation requests with optional PDF output are free.
 
 = Do I need Maxima installed on my server ? =
 
-No, Wordpress and the Caascade plugin are the only software requirements. The MathJax-LaTeX plugin is necessary for TeX rendering.
-
-= How do I prevent spam submissions ? =
-
-With Recaptcha you can help prevent spam and other abuse of your Caascade account. Configure the public and private key settings to automatically add a Recaptcha form to all your widgets.
-
-= Why is it recommended to whitelist my IP address ? =
-
-To prevent unauthorized use of your Tetragy account. If IP enforcing is disabled, any Caascade request made with your ID will be deducted from your account.
+No, Wordpress and the Caascade plugin are the only software requirements. The Simple-MathJax plugin is necessary for TeX rendering.
 
 References
 
