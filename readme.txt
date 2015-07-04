@@ -11,9 +11,11 @@ Caascade allows users to request output from the Maxima CAS.
 
 == Description ==
 
-Caascade is a free Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. Notable features include PDF and Recaptcha support. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with their site's mathematical content.
+Caascade is a free Computation-as-a-Service API. Using Wordpress Shortcode, this plugin allows forms to be embedded for various mathematical operations. Users can enter expressions which are evaluated by a Caascade server. The Caascade plugin may be useful to bloggers and other web publishers who would like their readers to interact with their site's mathematical content.
 
-Tetragy welcomes requests for new operations that may be specific to a user or organization. The current version of the plugin provides for the following operations:
+Tetragy welcomes requests for new operations that may be specific to a user or organization. A demo is available at https://wp.tetragy.com.
+
+The current version of the plugin provides for the following operations:
 
 Arithmetic
 
@@ -120,7 +122,7 @@ All computation requests with optional PDF output are free.
 
 = Do I need Maxima installed on my server ? =
 
-No, Wordpress and the Caascade plugin are the only software requirements. The Simple-MathJax plugin is necessary for TeX rendering.
+No, WordPress and Caascade plugins are the only software requirements. The Simple-MathJax plugin is necessary for TeX rendering.
 
 References
 
