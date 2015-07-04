@@ -88,7 +88,7 @@ function caascade_plugin_admin_init()
 
 function caascade_section_text()
 {
-  echo '<p>Your Caascade settings page will list your numeric ID. The ID listed here will be submitted with all Caascade requests.</p>';
+  echo '<p>Your user settings page at math.tetragy.com will list your numeric ID.</p>';
 }
 
 function caascade_recaptcha_text()
