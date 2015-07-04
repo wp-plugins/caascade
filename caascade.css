@@ -22,6 +22,8 @@ input[type="hidden"], .caascade-waiting { display:none; }
 
 .caascade-dialog pre { text-align:left;padding-left:7%; }
 
+.caascade-out-output pre { background-color:#FFF;border:none; }
+
 .caascade-cp { line-height:4em; }
 
 .form-type-checkbox .description { margin-left:0; }
