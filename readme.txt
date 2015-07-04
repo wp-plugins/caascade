@@ -2,7 +2,7 @@
 Contributors: pmagunia
 Tags: math,education,shortcode
 Requires at least: 3.9.2
-Tested up to: 4.1
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2  or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -144,6 +144,11 @@ References
 
 == Changelog ==
 
+= 1.8.1 =
+* Add CSS line for recaptcha table for newer WP themes
+* Change wording of Caascade settings page
+* New operation: base
+
 = 1.8.0 =
 * New operation: lcm1
 * Drop MathJax-LaTeX support in favor of Simple-Mathjax
@@ -245,6 +250,11 @@ References
 
 
 == Upgrade Notice ==
+
+= 1.8.1 =
+CSS Bug fix for Recaptcha
+Change wording of settings page
+New operation: base
 
 = 1.8.0 =
 New operations

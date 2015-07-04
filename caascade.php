@@ -3,7 +3,7 @@
  * Plugin Name: Caascade
  * Plugin URI: http://wp.tetragy.com
  * Description: Mathematical Computing for the Wordpress public
- * Version: 1.8.0
+ * Version: 1.8.1
  * Author: pmagunia
  * Author URI: https://tetragy.com
  * License: GPLv2 or Later
@@ -52,7 +52,7 @@ function caascade_plugin_settings_page()
         include_once(ABSPATH . 'wp-admin/includes/plugin.php');
         echo (!is_plugin_active('simple-mathjax/simple-mathjax.php') ? '<h3 style="color:red;">Required Wordpress Simple-MathJax plugin not found.</h3>' : '');
       ?>
-      <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode.</p><p>A Caascade account is necessary and may be obtained from <a href="https://tetragy.com/user/register">Tetragy</a>.</p>
+      <p>Settings related to the Caascade plugin can be modified here and will have a global effect on all Caascade shortcode.</p>
       <div>
         <form action="options.php" method="post">
           <?php settings_fields('caascade_plugin_settings'); ?>
@@ -79,10 +79,10 @@ function caascade_plugin_admin_init()
   add_settings_section('caascade_options', 'Caascade', 'caascade_section_text', 'caascade');
   add_settings_section('caascade_recaptcha_options', 'Recaptcha', 'caascade_recaptcha_text', 'caascade');
   add_settings_section('caascade_helper_options', 'Quickstart', 'caascade_helper_text', 'caascade');
-  add_settings_field('caascade_id', 'Caascade Numeric ID', 'caascade_setting_string', 'caascade', 'caascade_options');
+  add_settings_field('caascade_id', 'Caascade Numeric ID (optional)', 'caascade_setting_string', 'caascade', 'caascade_options');
   add_settings_field('caascade_router', 'Caascade Router', 'caascade_setting_router', 'caascade', 'caascade_options');
-  add_settings_field('caascade_recaptcha_publickey', 'Recaptcha Public Key', 'caascade_setting_recaptcha_publickey', 'caascade', 'caascade_recaptcha_options');
-  add_settings_field('caascade_recaptcha_privatekey', 'Recaptcha Private Key', 'caascade_setting_recaptcha_privatekey', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_publickey', 'Recaptcha Public Key (optional)', 'caascade_setting_recaptcha_publickey', 'caascade', 'caascade_recaptcha_options');
+  add_settings_field('caascade_recaptcha_privatekey', 'Recaptcha Private Key (optional)', 'caascade_setting_recaptcha_privatekey', 'caascade', 'caascade_recaptcha_options');
   add_settings_field('caascade_recaptcha_theme', 'Recaptcha Theme', 'caascade_setting_recaptcha_theme', 'caascade', 'caascade_recaptcha_options');
 }
 

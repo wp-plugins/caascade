@@ -28,6 +28,8 @@ input[type="hidden"], .caascade-waiting { display:none; }
 
 .caascade-recaptcha { width:460px; }
 
+.recaptchatable {table-layout:auto;}
+
 .caascade-pdf, .caascade-approximate { margin:0 0.7em; }
 
 .caascade option { padding:0.5em; }
