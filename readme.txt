@@ -124,6 +124,10 @@ All computation requests with optional PDF output are free.
 
 No, WordPress and Caascade plugins are the only software requirements. The Simple-MathJax plugin is necessary for TeX rendering.
 
+= Where can I try a demo ? =
+
+https://wp.tetragy.com
+
 References
 
 - http://maxima.sourceforge.net
