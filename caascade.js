@@ -3,7 +3,7 @@ jQuery(document).ready( function($)
   var pubkey = caascadeAjax.caascade_recaptcha_pubkey
   $('.caascade-submit').click(function()
   {
-    cid = '#' + $(this).parent('div').parent('div').attr('id')
+    var cid = '#' + $(this).parent('div').parent('div').attr('id')
     if($(cid + ' .caascade-arg0').val() == '')
     {
      alert('Please enter all required input.')
@@ -34,7 +34,6 @@ jQuery(document).ready( function($)
       }
     }
 
-    cid = '#' + $(this).parent('div').parent('div').attr('id')
     $(cid + ' .caascade-waiting').animate({opacity:1,height:'toggle'})
     $(cid + ' .caascade-output').animate({opacity:0,height:'toggle'})
     jQuery.ajax({
