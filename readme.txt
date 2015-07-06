@@ -148,6 +148,9 @@ References
 
 == Changelog ==
 
+= 1.8.2 =
+* Allow multiple simultaneous requests per page
+
 = 1.8.1 =
 * Add CSS line for recaptcha table for newer WP themes
 * Change wording of Caascade settings page
