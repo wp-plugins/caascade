@@ -150,6 +150,7 @@ References
 
 = 1.8.2 =
 * Allow multiple simultaneous requests per page
+* Override default CSS
 
 = 1.8.1 =
 * Add CSS line for recaptcha table for newer WP themes
